@@ -9,7 +9,9 @@ interface Props {
     | "Text_feature_section"
     | "Text_Icon_Heading"
     | "Text_Icon_Supporting_text"
-    | "Button_text"; // Ajout de la variante pour le texte des boutons
+    | "Button_text"
+    | "Logo_text"  // Variante pour le texte du logo
+    | "NavText";  // Nouvelle variante pour le texte de la navigation
   children: React.ReactNode;
   className?: string;
   theme?: "black" | "white" | "blue" | "gray";
@@ -51,9 +53,17 @@ export const Typography = ({
       variant_styles =
         "font-[Inter] font-normal text-[16px] leading-[24px] tracking-[0em]";
       break;
-    case "Button_text": // Styles pour le texte des boutons
+    case "Button_text":
       variant_styles =
-        "font-[Inter] font-semibold text-[13px] leading-[24px] tracking-[0em]";
+        "font-[Inter] font-semibold text-[16px] leading-[24px] tracking-[0em]";
+      break;
+    case "Logo_text": // Style pour le texte du logo
+      variant_styles =
+        "font-[Inter] font-semibold text-[24px]  ";
+      break;
+    case "NavText":  // Nouveau style pour le texte de la navigation
+      variant_styles =
+        "font-[Inter] font-semibold text-[16px] leading-[24px] tracking-[0em]";
       break;
     default:
       variant_styles = "";
