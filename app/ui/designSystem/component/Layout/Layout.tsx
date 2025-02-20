@@ -8,7 +8,7 @@ interface Props {
   ClassName?: string;
 }
 
-export default function Layout({ children }: Props) {
+export default function Layout({ }: Props) {
   return (
     <>
       <Navbar />
