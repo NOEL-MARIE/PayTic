@@ -10,8 +10,10 @@ interface Props {
     | "Text_Icon_Heading"
     | "Text_Icon_Supporting_text"
     | "Button_text"
-    | "Logo_text"  // Variante pour le texte du logo
-    | "NavText";  // Nouvelle variante pour le texte de la navigation
+    | "Logo_text"
+    | "NavText"
+    | "HeaderIcon_Section"
+    | "Text_featico"; // Ajout de la nouvelle variante
   children: React.ReactNode;
   className?: string;
   theme?: "black" | "white" | "blue" | "gray";
@@ -29,41 +31,39 @@ export const Typography = ({
   // Gestion des styles selon le variant
   switch (variant) {
     case "Heading_hero_section":
-      variant_styles =
-        "font-[Inria Sans] font-bold text-[56px] leading-[64px] tracking-[-0.02em]";
+      variant_styles = " text-semibold font-bold text-[56px]  ";
       break;
     case "Supporting_text_hero_section":
-      variant_styles =
-        "font-[Inter] font-normal text-[18px] leading-[26px] tracking-[0em]";
+      variant_styles = " text-semibold text-text_navigation text-[18px]  ";
       break;
     case "Heading_feature_section":
-      variant_styles =
-        "font-[Inria Sans] font-bold text-[36px] leading-[44px] tracking-[-0.02em]";
+      variant_styles = " text-semibold font-bold text-[36px]  ";
       break;
     case "Supporting_text_feature_section":
     case "Text_feature_section":
-      variant_styles =
-        "font-[Inter] font-normal text-[18px] leading-[26px] tracking-[0em]";
+      variant_styles = " text-semibold font-normal text-[18px]  ";
       break;
     case "Text_Icon_Heading":
-      variant_styles =
-        "font-[Inria Sans] font-bold text-[20px] leading-[30px] tracking-[0em]";
+      variant_styles = " text-semibold font-bold text-[20px]  ";
       break;
     case "Text_Icon_Supporting_text":
-      variant_styles =
-        "font-[Inter] font-normal text-[16px] leading-[24px] tracking-[0em]";
+      variant_styles = " text-semibold font-normal text-[16px]  ";
       break;
     case "Button_text":
-      variant_styles =
-        "font-[Inter] font-semibold text-[16px] leading-[24px] tracking-[0em]";
+      variant_styles = " text-semibold font-semibold text-[16px]  ";
       break;
-    case "Logo_text": // Style pour le texte du logo
-      variant_styles =
-        "font-[Inter] font-semibold text-[24px]  ";
+    case "Logo_text":
+      variant_styles = " text-semibold font-semibold text-[24px]";
       break;
-    case "NavText":  // Nouveau style pour le texte de la navigation
+    case "NavText":
       variant_styles =
-        "font-[Inter] font-semibold text-[16px] leading-[24px] tracking-[0em]";
+        "hover:text-btn_col cursor-pointer text-text_navigation text-semibold  font-semibold text-[16px]  ";
+      break;
+    case "HeaderIcon_Section": // Ajout du style pour le header icon section
+      variant_styles = " text-semibold font-semibold text-[20px]   text-center";
+      break;
+    case "Text_featico": // Ajout du style pour le text featico
+      variant_styles = " text-semibold font-normal text-[16px]  text-center";
       break;
     default:
       variant_styles = "";
@@ -91,10 +91,10 @@ export const Typography = ({
   const button_styles = theme === "blue" ? "bg-[#007AFF]" : "";
 
   return (
-    <p
+    <div
       className={clsx(variant_styles, theme_styles, className, button_styles)}
     >
       {children}
-    </p>
+    </div>
   );
 };

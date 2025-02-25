@@ -1,17 +1,22 @@
+
 import React from "react";
-import Navbar from "../Navbar/NavBar";
-// import { Container_Nav } from "../../container/container_Nav";
-// import { Container } from "../../container/container_";
+import { Footer } from "../Footer/Footer";
+import NavBar from "@/app/component/Navbar/NavBar"
+import { Container } from "../container_/Container";
+
 
 interface Props {
   children: React.ReactNode;
   ClassName?: string;
 }
 
-export default function Layout({ }: Props) {
+export default function Layout({ children }: Props) {
   return (
     <>
-      <Navbar />
+   
+      <NavBar />
+      {children}
+      <Footer />
     </>
   );
 }

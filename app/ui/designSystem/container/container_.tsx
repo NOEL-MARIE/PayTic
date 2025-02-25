@@ -10,7 +10,7 @@ export const Container = ({ children, className }: ContainerProps) => {
   return (
     <div
       className={clsx(
-        "w-[1280px] h-[44px] max-w-[container-max-width-desktop] flex justify-between items-center ",
+        "w-screen  flex justify-between items-center px-4 md:px-8",
         className
       )}
     >
@@ -18,4 +18,3 @@ export const Container = ({ children, className }: ContainerProps) => {
     </div>
   );
 };
-
