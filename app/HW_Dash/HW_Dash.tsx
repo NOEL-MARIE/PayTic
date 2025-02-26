@@ -88,7 +88,7 @@ export const HW_Dash = () => {
             {sections.map((section, index) => (
               <div
                 key={index}
-                ref={(el) => (buttonsRef.current[index] = el)} // Associe chaque bouton à sa référence dans le tableau `buttonsRef`
+                ref={(el) => { buttonsRef.current[index] = el; }} // Associe chaque bouton à sa référence dans le tableau `buttonsRef`
                 onClick={() => setActiveSection(index)} // Met à jour la section active
                 className={`cursor-pointer flex items-center px-4 py-2 rounded-md transition duration-200 relative w-full ${
                   activeSection === index // Si cette section est active, applique un style spécifique

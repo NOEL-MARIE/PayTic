@@ -2,7 +2,7 @@ import React from "react";
 import { Container_Nav } from "../../container/container_Nav";
 import { Container } from "../../container/container_";
 import { Button } from "../../Typo/button/buttons";
-import { Logomark } from "@/app/Logomark/Logomark";
+
 import { Typography } from "../../Typo/Typography";
 import Image from "next/image";
 
@@ -14,7 +14,7 @@ export default function NavBar() {
         <Container>
           <div className="  flex gap-1  ">
             <span className="border">
-              <Logomark />
+
             </span>
             <Typography variant="Logo_text" className=" pt-[6px]">
               <Image
