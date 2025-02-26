@@ -34,7 +34,7 @@ export const Typography = ({
       variant_styles = " text-semibold font-bold text-[56px]  ";
       break;
     case "Supporting_text_hero_section":
-      variant_styles = " text-semibold text-text_navigation text-[18px]  ";
+      variant_styles = " xs:text-[14px] text-semibold text-text_navigation text-[18px]  ";
       break;
     case "Heading_feature_section":
       variant_styles = " text-semibold font-bold text-[36px]  ";
@@ -63,7 +63,7 @@ export const Typography = ({
       variant_styles = " text-semibold font-semibold text-[20px]   text-center";
       break;
     case "Text_featico": // Ajout du style pour le text featico
-      variant_styles = " text-semibold font-normal text-[16px]  text-center";
+      variant_styles = " 2xl:text-[19px] Md:text-[14px]  text-semibold font-normal text-[16px]  text-center";
       break;
     default:
       variant_styles = "";

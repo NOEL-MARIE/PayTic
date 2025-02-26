@@ -6,7 +6,7 @@ interface ContainerFooterProps {
 
 export const Container_Footer: React.FC<ContainerFooterProps> = ({ children }) => {
   return (
-    <footer className="w-screen p-32 h-[320px] flex flex-col items-center justify-center bg-NavBar_col text-white  gap-20">
+    <footer className="w-full h-auto p-4 md:p-16 lg:p-32 flex flex-col md:flex-row items-center justify-between bg-NavBar_col text-white gap-10">
       {children}
     </footer>
   );

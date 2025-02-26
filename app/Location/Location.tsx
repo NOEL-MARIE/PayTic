@@ -9,55 +9,63 @@ export default function Location() {
     e.preventDefault();
     alert(`Email soumis : ${email}`);
   };
+
   return (
-    <div className="w-screen h-screen flex flex-row  pt-10   md:px-8   sm:p-10 bg-feature">
-      <div className=" flex flex-col  h-screen justify-center items-start md:px-8">
-        <Typography variant="Heading_feature_section">
-          Où nous sommes disponibles ?
-        </Typography>
-        <Typography variant="Supporting_text_feature_section" theme="gray">
-          Actuellement disponible en{" "}
-          <span className=" font-extrabold ">Côte d'Ivoire</span> , nous
-          travaillons activement pour <br /> élargir notre présence dans
-          d’autres pays africains. Restez connectés,
-          <br />
-          <span className=" font-extrabold ">
-            PayTic arrive bientôt près de chez vous !
-          </span>
-        </Typography>
-        <div>
+    <div className="w-full min-h-screen xs:pt-6 flex pb-7 flex-col-reverse lg:flex-row items-center justify-center gap-10 px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 bg-feature">
+      {/* Section Texte & Formulaire */}
+      <div className="flex flex-col items-start justify-center text-center lg:text-left max-w-2xl">
+        <div className="xs:px-6">
+          <Typography variant="Heading_feature_section">
+            Où nous sommes disponibles ?
+          </Typography>
+          <Typography variant="Supporting_text_feature_section" theme="gray">
+            Actuellement disponible en{" "}
+            <span className="font-extrabold">Côte d'Ivoire</span>, nous
+            travaillons activement pour <br className="hidden md:block" />{" "}
+            élargir notre présence dans d’autres pays africains. Restez
+            connectés,
+            <br className="hidden md:block" />
+            <span className="font-extrabold">
+              PayTic arrive bientôt près de chez vous !
+            </span>
+          </Typography>
+        {/* Formulaire */}
+        <div className="w-full mt-6">
           <form
             onSubmit={handleSubmit}
-            className="flex gap-4 pt-5 w-full flex-col justi items-start"
+            className="flex flex-col   sm:flex-row gap-4 w-full"
           >
             {/* Champ de saisie */}
-            <div className="flex gap-5">
-              <input
-                type="email"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                placeholder="Saisissez votre e-mail"
-                className="w-[239px] h-[44px] pt-2 pr-6 pb-2 pl-6 gap-2 border-1 border-gray-300 text-NavBar_col  rounded-md outline-none focus:ring-2 focus:ring-indigo-500"
-                required
-              />
-              {/* Bouton d'abonnement */}
-              <button
-                type="submit"
-                className="w-[105px] h-[44px] flex items-center justify-center pt-2 pr-8 pb-2 pl-8 gap-2 border-1 border-gray-300 rounded-md bg-indigo-600 text-white hover:bg-indigo-700 transition"
-              >
-                S'abonner
-              </button>
-            </div>
-            <p>S'inscrire à notre newsletter.</p>
+            <input
+              type="email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              placeholder="Saisissez votre e-mail"
+              className="flex-1  px-4 py-2 border border-gray-300 rounded-md outline-none focus:ring-2 focus:ring-indigo-500"
+              required
+            />
+            {/* Bouton d'abonnement */}
+            <button
+              type="submit"
+              className="px-6 py-2 rounded-md bg-indigo-600 text-white hover:bg-indigo-700 transition"
+            >
+              S'abonner
+            </button>
           </form>
+          <p className="text-sm  mt-2">S'inscrire à notre newsletter.</p>
         </div>
+        </div>
+
       </div>
-      <div>
+
+      {/* Image adaptative */}
+      <div className="flex justify-center">
         <Image
           src="/asset/Group.svg"
-          alt=""
-          width={509.76513671875}
-          height={492.3746032714844}
+          alt="Carte de disponibilité"
+          width={600}
+          height={550}
+          className="w-full max-w-sm sm:max-w-md md:max-w-lg lg:max-w-xl xl:max-w-2xl h-auto"
         />
       </div>
     </div>

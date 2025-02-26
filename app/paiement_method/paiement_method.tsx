@@ -5,16 +5,20 @@ import { Button } from "../ui/designSystem/Typo/button/buttons";
 
 export default function Paiement_method() {
   return (
-    <div className="w-screen  flex flex-col justify-center items-center h-screen  pt-10   md:px-8 ">
-      <div className="w-screen h-screen  flex flex-col justify-center items-center gap-14 md:px-8">
-        <Typography variant="Heading_feature_section" className="text-center">
+    <div className="w-screen pt-60 md:pt-0 h-screen flex flex-col items-center justify-center py-10 px-4 sm:px-6 md:px-8 xs:mt-6 lg:px-12 xl:px-16">
+      {/* Contenu principal */}
+      <div className="w-full max-w-7xl flex flex-col items-center gap-8 Md:gap-14 text-center">
+        
+        {/* Titre */}
+        <Typography className="xs:px-8" variant="Heading_feature_section">
           Moyens de paiement disponibles
         </Typography>
 
+        {/* Texte descriptif */}
         <Typography
           theme="gray"
           variant="Supporting_text_feature_section"
-          className="text-center w-[768px] h-[104px] overflow-auto mx-auto"
+          className="max-w-2xl text-center xs:px-8"
         >
           Nous mettons à votre disposition une large gamme de solutions de
           paiement, adaptées aux besoins des entreprises et des particuliers,
@@ -23,14 +27,18 @@ export default function Paiement_method() {
           encore plus de flexibilité.
         </Typography>
 
-        <div>
+        {/* Image */}
+        <div className="w-full Md:w-[4440px] flex justify-center">
           <Image
             src="/asset/Container(1).svg"
-            alt=""
+            alt="Moyens de paiement"
             width={1280}
             height={88}
+            className="w-full  max-w-4xl h-auto"
           />
         </div>
+
+        {/* Bouton */}
         <div>
           <Button variant="Demander une démo">Nous contacter</Button>
         </div>

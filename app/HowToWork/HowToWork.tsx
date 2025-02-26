@@ -15,8 +15,8 @@ export const HowToWork = () => {
           Nos Services
         </Typography>
 
-        <div className="grid grid-cols-1 sm:grid-cols-1 lg:grid-cols-3 gap-8 justify-items-center">
-          <HTW_Container className="">
+        <div className="grid grid-cols-1 sm:grid-cols-1 lg:grid-cols-3 Md: gap-8 Md:justify-center justify-items-center">
+          <HTW_Container className="Md:mt-7">
             <Image
               src="asset/First_Icon.svg"
               width={48}
@@ -26,7 +26,7 @@ export const HowToWork = () => {
             <Typography variant="HeaderIcon_Section">
               Encaissements en ligne
             </Typography>
-            <Typography variant="Text_featico">
+            <Typography variant="Text_featico" className="">
               {" "}
               Acceptez Mobile Money, cartes bancaires, virements et bien plus.
               PayTic prend en charge une large gamme de méthodes de paiement

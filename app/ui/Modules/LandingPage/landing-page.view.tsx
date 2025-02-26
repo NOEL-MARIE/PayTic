@@ -1,4 +1,4 @@
-import { Featured_section } from "@/app/Featured/Featured_section";
+import { Featured_section } from "@/app/component/Navbar/Featured_section";
 import HeroTop from "@/app/heroTop/heroTop";
 import { HowToWork } from "@/app/HowToWork/HowToWork";
 import { HW_Dash } from "@/app/HW_Dash/HW_Dash";

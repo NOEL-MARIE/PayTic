@@ -8,6 +8,11 @@ export default {
   ],
   theme: {
     extend: {
+      screens: {
+        'xs': '320px',  // 320px        
+        '2xl': '1440px', // Ajout d'un breakpoint pour 1440px
+
+      },
       fontFamily: {
         // police perso
         inriasans: ["--font-inria-sans "],
