@@ -11,7 +11,7 @@ export default function Location() {
   };
 
   return (
-    <div className="w-full min-h-screen xs:pt-6 flex pb-7 flex-col-reverse lg:flex-row items-center justify-center gap-10 px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 bg-feature">
+    <div className="w-full sm:mt-80 lg:mt-0 l lg:pt-20 lg:pb-20 xs:pt-6 flex pb-7 flex-col-reverse lg:flex-row items-center justify-center gap-10 px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 bg-feature">
       {/* Section Texte & Formulaire */}
       <div className="flex flex-col items-start justify-center text-center lg:text-left max-w-2xl">
         <div className="xs:px-6">
@@ -59,13 +59,13 @@ export default function Location() {
       </div>
 
       {/* Image adaptative */}
-      <div className="flex justify-center">
+      <div className="flex justify-center ">
         <Image
           src="/asset/Group.svg"
           alt="Carte de disponibilité"
           width={600}
           height={550}
-          className="w-full max-w-sm sm:max-w-md md:max-w-lg lg:max-w-xl xl:max-w-2xl h-auto"
+          className="w-full max-w-sm sm:max-w-md md:max-w-lg lg:max-w-xl  xl:max-w-2xl h-auto"
         />
       </div>
     </div>

@@ -32,7 +32,7 @@ export default function NavBar() {
           </div>
 
           {/* Menu navigation pour les écrans larges */}
-          <div className="hidden md:flex  gap-4 ">
+          <div className="hidden sm:flex  gap-4 ">
             <Typography variant="NavText">
               <p>Nos services</p>
             </Typography>

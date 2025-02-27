@@ -5,9 +5,9 @@ import { Button } from "../ui/designSystem/Typo/button/buttons";
 
 export default function Paiement_method() {
   return (
-    <div className="w-screen pt-60 md:pt-0 h-screen flex flex-col items-center justify-center py-10 px-4 sm:px-6 md:px-8 xs:mt-6 lg:px-12 xl:px-16">
+    <div className=" mb-60 md:pb-0 justify-center items-center md:mb-0 md:pt-16 lg:mb-32 sm:pt-48 pt-96 mt-32  flex flex-col    px-4  md:px-8  ">
       {/* Contenu principal */}
-      <div className="w-full max-w-7xl flex flex-col items-center gap-8 Md:gap-14 text-center">
+      <div className="  flex flex-col items-center gap-8  text-center">
         
         {/* Titre */}
         <Typography className="xs:px-8" variant="Heading_feature_section">
@@ -28,14 +28,64 @@ export default function Paiement_method() {
         </Typography>
 
         {/* Image */}
-        <div className="w-full Md:w-[4440px] flex justify-center">
+        <div className=" gap-2 grid grid-cols-2 md:grid-cols-4 xl:grid-cols-8">
           <Image
-            src="/asset/Container(1).svg"
+            src="/asset/moov.svg"
             alt="Moyens de paiement"
             width={1280}
             height={88}
             className="w-full  max-w-4xl h-auto"
           />
+          <Image
+            src="/asset/wave (2).svg"
+            alt="Moyens de paiement"
+            width={1280}
+            height={88}
+            className="w-full  max-w-4xl h-auto"
+          />
+          <Image
+            src="/asset/VISA.svg"
+            alt="Moyens de paiement"
+            width={1280}
+            height={88}
+            className="w-full  max-w-4xl h-auto"
+          />
+          <Image
+            src="/asset/T MONNEY.svg"
+            alt="Moyens de paiement"
+            width={1280}
+            height={88}
+            className="w-full  max-w-4xl h-auto"
+          />
+          <Image
+            src="/asset/RéseauFREE.svg"
+            alt="Moyens de paiement"
+            width={1280}
+            height={88}
+            className="w-full  max-w-4xl h-auto"
+          />
+          <Image
+            src="/asset/orange.svg"
+            alt="Moyens de paiement"
+            width={1280}
+            height={88}
+            className="w-full  max-w-4xl h-auto"
+          />
+          <Image
+            src="/asset/mtn.svg"
+            alt="Moyens de paiement"
+            width={1280}
+            height={88}
+            className="w-full  max-w-4xl h-auto"
+          />
+          <Image
+            src="/asset/MASTER CARD.svg"
+            alt="Moyens de paiement"
+            width={1280}
+            height={88}
+            className="w-full  max-w-4xl h-auto"
+          />
+
         </div>
 
         {/* Bouton */}

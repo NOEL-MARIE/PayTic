@@ -5,16 +5,15 @@ import { HTW_Container } from "./component/HTW_Container";
 
 export const HowToWork = () => {
   return (
-    <div className="w-screen    flex flex-col  bg-feature   flex-wrap p-20">
-      <div className="  ">
-        <Typography
-          variant="Heading_feature_section"
-          theme="black"
-          className="w-full text-center mb-10 "
-        >
-          Nos Services
-        </Typography>
-
+    <div className="w-screen    flex flex-col  bg-feature   flex-wrap p-2">
+      <Typography
+        variant="Heading_feature_section"
+        theme="black"
+        className="w-screen text-center xl:text-left  "
+      >
+        Nos Services
+      </Typography>
+      <div className="   ">
         <div className="grid grid-cols-1 sm:grid-cols-1 lg:grid-cols-3 Md: gap-8 Md:justify-center justify-items-center">
           <HTW_Container className="Md:mt-7">
             <Image

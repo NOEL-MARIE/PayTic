@@ -10,26 +10,26 @@ export const Featured_section = () => {
         <div className="flex gap-5 flex-col">
           {" "}
           <Typography
-            className=" md:justify-center  xs:justify-center flex"
+            className=" md:justify-center text-left  xs:justify-center flex"
             variant="Heading_feature_section"
           >
             À propos de PayTic
           </Typography>
           <Typography
-            className="xs:flex fy-start  md:px-16 flex xs:justify-center xs:text-center left xs:px-8"
+            className="xs:flex text-left lg:text-center   md:px-16 flex  xs:px-8"
             variant="Supporting_text_feature_section"
             theme="gray"
           >
             Nous croyons en un système de paiement fluide, rapide et accessible
-            à tous. PayTic vous <br /> offre une plateforme robuste pour
+            à tous. PayTic vous  offre une plateforme robuste pour
             simplifier et sécuriser vos transactions financières.
           </Typography>
         </div>
 
         {/* Section avec image et texte */}
-        <div className="flex flex-col xs:pb-20 sm:pb-20 2xl:px-9 gap-8 lg:gap-20 lg:flex-row items-center justify-between">
+        <div className="flex flex-col xs:pb-20 sm:pb-20 2xl:px-9 gap-8 lg:gap-20 md:flex-row items-center justify-between">
           {/* Partie image */}
-          <div className="hidden md:block justify-center items-center xs:h-1/2 w-full">
+          <div className="hidden md:block justify-center items-center lg: xs:h-1/2 w-full">
             <Image
               src="asset/Content.svg"
               width={570}

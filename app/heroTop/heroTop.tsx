@@ -24,14 +24,14 @@ export default function HeroTop() {
             <Typography
               variant="Supporting_text_hero_section"
               theme="gray"
-              className="mt-4 md:text-center text-left "
+              className="mt-4 px-11 md:px-0 text-center md:text-left "
             >
               La solution idéale pour les entreprises, commerçants
               et entrepreneurs qui souhaitent une gestion efficace
               et rapide des paiements en ligne.
             </Typography>
 
-            <div className="mt-4 flex flex-col xs:flex-row md:flex-row xs:justify-center gap-3">
+            <div className="mt-4  flex flex-col items-center md:flex-row  xs:justify-center gap-3">
               <Button
                 variant="demo"
                 className="flex flex-row gap-3 justify-center xs:justify-start items-center"

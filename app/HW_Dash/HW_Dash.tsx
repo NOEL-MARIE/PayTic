@@ -22,19 +22,19 @@ export const HW_Dash = () => {
       title: "Créez un compte",
       subTitle:
         "Inscrivez-vous en quelques minutes et accédez à votre tableau de bord sécurisé.",
-      image: "/asset/Paytic(3).svg", // Image spécifique pour cette section
+      image: "/asset/Content.svg", // Image spécifique pour cette section
     },
     {
       title: "Connectez votre entreprise",
       subTitle:
         "Ajoutez vos informations et configurez vos options de paiement.",
-      image: "/asset/Paytic(2).svg", // Image spécifique pour cette section
+      image: "/asset/HW_img.svg", // Image spécifique pour cette section
     },
     {
       title: "Démarrez vos transactions",
       subTitle:
         "Acceptez et envoyez des paiements en toute sécurité dès votre activation.",
-      image: "/asset/Logomark.svg", // Image spécifique pour cette section
+      image: "/asset/HW_img.svg", // Image spécifique pour cette section
     },
     {
       title: "Intégrez notre API",
@@ -55,19 +55,19 @@ export const HW_Dash = () => {
   }, [activeSection]); // S'exécute à chaque changement de `activeSection`
 
   return (
-    <div className="w-screen h-screen mb-36 justify-center xs:mt-64 flex flex-col pt-10 md:px-8">
-      <div className="w-screen xs:px-9 flex flex-col md:px-8">
+    <div className="w-screen md:mt-0 md:pt-0 mb-36 justify-center  xs:mt-64 flex flex-col  md:px-8">
+      <div className="w-screen xs:px-9 flex flex-col md:px-10">
         {/* Titre principal de la page */}
-        <div className="w-full xs:justify-center  flex flex-col md:flex-row md:justify-between  items-center mb-8">
+        <div className="w-full xs:justify-center lg:mt-10 lg:mb-0 mt-96  flex flex-col md:flex-row md:justify-between px-9  items-center mb-8">
           <Typography
             variant="Heading_feature_section"
-            className="text-left xs:text-center"
+            className="text-left "
           >
             Comment ça marche ?
           </Typography>
           <Button
             variant="Demander une démo"
-            className="xs:px-9  md:px-9 2xl:px-9"
+            className="  "
           >
             Commencer maintenant
           </Button>
@@ -83,7 +83,7 @@ export const HW_Dash = () => {
               transition={{ type: "spring", stiffness: 120, damping: 20 }} // Animation fluide
               style={{ height: "84px" }} // Hauteur de l'indicateur mise à 84px
             />
-            <div className="ml-1 top-6 left-1 z-0 absolute w-1 bottom-6 bg-[#F2F4F7]"></div>
+            <div className="ml-1 top-28 left-1 z-0 absolute w-1 bottom-28 bg-[#F2F4F7]"></div>
             {/* Liste des sections cliquables */}
             {sections.map((section, index) => (
               <div
@@ -109,20 +109,20 @@ export const HW_Dash = () => {
           </div>
 
           {/* Contenu principal affichant la section active */}
-          <div className="w-full md:w-3/4 p-8">
+          <div className="w-full h-full  p-8">
             <motion.div
               key={activeSection} // Permet à Framer Motion de réanimer à chaque changement de section
               initial={{ opacity: 0, y: 20 }} // Animation d'apparition (légère montée)
               animate={{ opacity: 1, y: 0 }} // Animation pour rendre l'élément complètement visible
               transition={{ duration: 0.5 }} // Durée de la transition
-              className="max-w-2xl mx-auto"
+              className="flex mx-auto justify-center items-center"
             >
-              <Image
+              <img
                 src={sections[activeSection].image} // Image spécifique à la section active
                 alt={`Image pour ${sections[activeSection].title}`}
-                width={100} // Largeur de l'image réduite
-                height={100} // Hauteur de l'image réduite
-                className="w-[84px] h-[84px] pb-11 md:pb-0 max-w-full mb-24 overflow-hidden" // Ajustement supplémentaire pour la taille
+                // width={100} // Largeur de l'image réduite
+                // height={100} // Hauteur de l'image réduite
+                className=" xs:pb-72  md:pb-0 max-w-full  flex  " // Ajustement supplémentaire pour la taille
               />
             </motion.div>
           </div>

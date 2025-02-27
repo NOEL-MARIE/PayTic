@@ -4,10 +4,10 @@ import Image from "next/image";
 
 export default function Space_dev() {
   return (
-    <div className="w-full h-auto mt-52 md:mt-0 flex flex-col items-center justify-between px-6 md:px-16 py-12">
+    <div className="w-screen  xs:pt-72 md:pt-0  md:mt-0 flex flex-col items-center justify-between px-6 md:px-16 py-12">
       {/* Bloc de texte */}
       <div className="flex flex-col w-full  items-start gap-8 md:text-left xs:text-center">
-        <div className="flex flex-col  gap-4  px-5">
+        <div className="flex flex-col  gap-4  px-14 md:px-0">
           <Typography variant="Heading_feature_section">
             Espace Développeur
           </Typography>
