@@ -25,7 +25,7 @@ export const Button = ({
 
   switch (variant) {
     case "besoinAide":
-      variantStyles = `w-[126px] h-[44px] pt-[10px] pr-[spacing-xl] pb-[10px] pl-[spacing-xl] gap-[spacing-sm] border-[1px] border-[#E7E7E7] bg-[#FFFFFF] shadow-[0px_1px_2px_0px_#1018280D] rounded-md`;
+      variantStyles = `w-[177px]  md:w-[126px] h-[44px] pt-[10px] pr-[spacing-xl] pb-[10px] pl-[spacing-xl] gap-[spacing-sm] border-[1px] border-[#E7E7E7] bg-[#FFFFFF] shadow-[0px_1px_2px_0px_#1018280D] rounded-md`;
       break;
     case "demanderDemo":
       variantStyles = `w-[177px] text-white h-[44px] pt-[10px] pr-[spacing-xl] pb-[10px] pl-[spacing-xl] gap-[spacing-sm] border-[1px] border-[#007AFF] bg-[#007AFF] shadow-[0px_1px_2px_0px_#1018280D] rounded-md`;

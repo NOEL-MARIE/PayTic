@@ -1,3 +1,4 @@
+"use client";
 import clsx from "clsx";
 
 interface Props {
@@ -34,7 +35,8 @@ export const Typography = ({
       variant_styles = " text-semibold font-bold text-[56px]  ";
       break;
     case "Supporting_text_hero_section":
-      variant_styles = " xs:text-[14px] text-semibold text-text_navigation text-[18px]  ";
+      variant_styles =
+        " xs:text-[14px] text-semibold text-text_navigation text-[18px]  ";
       break;
     case "Heading_feature_section":
       variant_styles = " text-semibold font-bold text-[36px]  ";
@@ -57,13 +59,14 @@ export const Typography = ({
       break;
     case "NavText":
       variant_styles =
-        "hover:text-btn_col lg:text-[12px] cursor-pointer text-text_navigation text-semibold  font-semibold text-[16px]  ";
+        " hover:bg-text_navigation md:hover:bg-btn_col hover:rounded-lg lg:text-[12px] cursor-pointer text-text_navigation text-semibold  font-semibold text-[16px]  ";
       break;
     case "HeaderIcon_Section": // Ajout du style pour le header icon section
       variant_styles = " text-semibold font-semibold text-[20px]   text-center";
       break;
     case "Text_featico": // Ajout du style pour le text featico
-      variant_styles = " 2xl:text-[19px] Md:text-[14px]  text-semibold font-normal text-[16px]  text-center";
+      variant_styles =
+        " 2xl:text-[19px] Md:text-[14px]  text-semibold font-normal text-[16px]  text-center";
       break;
     default:
       variant_styles = "";
@@ -91,10 +94,10 @@ export const Typography = ({
   const button_styles = theme === "blue" ? "bg-[#007AFF]" : "";
 
   return (
-    <div
+    <span
       className={clsx(variant_styles, theme_styles, className, button_styles)}
     >
       {children}
-    </div>
+    </span>
   );
 };

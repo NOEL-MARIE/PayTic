@@ -1,118 +1,117 @@
 "use client";
 import React, { useState } from "react";
 import Image from "next/image";
+
 import { Button } from "@/app/ui/designSystem/button/buttons";
 import { Container_Nav } from "@/app/ui/designSystem/container/container_Nav";
 import { Typography } from "@/app/ui/designSystem/Typo/Typography";
 import { Container } from "@/app/ui/designSystem/container/container_";
-import { FaTimes, FaBars } from "react-icons/fa"; // Icônes hamburger & fermeture
+import { FaTimes, FaBars } from "react-icons/fa"; // Utilisation des icônes React (FaTimes pour quitter et FaBars pour hamburger)
 
 export default function NavBar() {
-  const [isMenuOpen, setIsMenuOpen] = useState(false); // État du menu mobile
+  const [isMenuOpen, setIsMenuOpen] = useState(false); // State pour gérer l'ouverture du menu sur mobile
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
-    document.body.style.overflow = isMenuOpen ? "auto" : "hidden"; // Empêche le scroll sur mobile
   };
 
   return (
-    <Container_Nav>
-      <Container>
-        {/* Logo */}
-        <div className="flex items-center">
-          <Image
-            src="/asset/Paytic(3).svg"
-            width={112}
-            height={26}
-            alt="PayTic"
-            className="w-[112px] h-auto"
-          />
-        </div>
-
-        {/* Menu pour les écrans larges */}
-        <nav className="hidden lg:mr-8  lg:flex gap-8 ml-24 items-center">
-          <Typography
-            variant="NavText"
-            className="hover:text-indigo-600 cursor-pointer"
-          >
-            Nos services
-          </Typography>
-          <Typography
-            variant="NavText"
-            className="hover:text-indigo-600 cursor-pointer"
-          >
-            Nos tarifs
-          </Typography>
-          <Typography
-            variant="NavText"
-            className="hover:text-indigo-600 cursor-pointer"
-          >
-            Comment ça marche ?
-          </Typography>
-        </nav>
-
-        {/* Boutons */}
-        <div className="hidden lg:flex gap-4">
-          <Button variant="besoinAide">Besoin d’aide</Button>
-          <Button variant="demanderDemo">Demander une démo</Button>
-        </div>
-
-        {/* Icône hamburger pour mobile */}
-        <button onClick={toggleMenu} className="lg:hidden text-3xl">
-          {isMenuOpen ? <FaTimes /> : <FaBars />}
-        </button>
-
-        {/* Menu mobile */}
-        <div
-          className={`fixed top-0 left-0 w-full h-screen bg-white transform ${
-            isMenuOpen ? "translate-x-0" : "-translate-x-full"
-          } transition-transform duration-300 ease-in-out flex flex-col items-center justify-center gap-6`}
-        >
-          {/* Logo et bouton de fermeture */}
-          <div className="absolute top-6 left-6">
-            <Image
-              src="/asset/Paytic(3).svg"
-              width={112}
-              height={26}
-              alt="PayTic"
-            />
+    <div>
+      <Container_Nav>
+        <Container className="">
+          {/* Logo et titre */}
+          <div className="flex items-center gap-2">
+            <Typography variant="Logo_text" className="pt-[6px]">
+              <Image
+                src="/asset/Paytic(3).svg"
+                width={111.96522521972656}
+                height={26}
+                alt="PayTic.svg"
+              />
+            </Typography>
           </div>
-          <button
-            onClick={toggleMenu}
-            className="absolute top-6 right-6 text-3xl"
-          >
-            <FaTimes />
-          </button>
 
-          {/* Liens du menu mobile */}
-          <nav className="flex flex-col items-center gap-4 text-lg">
-            <Typography
-              variant="NavText"
-              className="hover:text-indigo-600 cursor-pointer"
-            >
-              Nos services
+          {/* Menu navigation pour les écrans larges */}
+          <div className="hidden md:flex  gap-4 ">
+            <Typography variant="NavText">
+              <p>Nos services</p>
             </Typography>
-            <Typography
-              variant="NavText"
-              className="hover:text-indigo-600 cursor-pointer"
-            >
-              Nos tarifs
+            <Typography variant="NavText" theme="gray">
+              <p>Nos tarifs</p>
             </Typography>
-            <Typography
-              variant="NavText"
-              className="hover:text-indigo-600 cursor-pointer"
-            >
-              Comment ça marche ?
+            <Typography variant="NavText" theme="gray">
+              <p>Comment ça marche ?</p>
             </Typography>
-          </nav>
+          </div>
 
-          {/* Boutons dans le menu mobile */}
-          <div className="flex flex-col gap-4">
+          {/* Boutons */}
+          <div className="hidden md:flex gap-4">
             <Button variant="besoinAide">Besoin d’aide</Button>
             <Button variant="demanderDemo">Demander une démo</Button>
           </div>
-        </div>
-      </Container>
-    </Container_Nav>
+
+          {/* Icône hamburger pour mobile */}
+          <div className="md:hidden flex items-center">
+            <button onClick={toggleMenu} className="text-2xl">
+              {isMenuOpen ? (
+                <FaTimes /> // Icône de fermeture
+              ) : (
+                <FaBars /> // Icône hamburger
+              )}
+            </button>
+          </div>
+
+          {/* Menu déroulant sur mobile */}
+          {isMenuOpen && (
+            <div className="md:hidden bg-white h-full  absolute top-0 left-0 w-full p-6 flex flex-col  gap-4">
+              {/* Logo + Icône de fermeture */}
+              <div className="flex justify-between items-center w-full">
+                <div className="flex items-center gap-2">
+                  <Typography variant="Logo_text" className="pt-[6px]">
+                    <Image
+                      src="/asset/Paytic(3).svg"
+                      width={111.96522521972656}
+                      height={26}
+                      alt="PayTic.svg"
+                    />
+                  </Typography>
+                </div>
+                <button onClick={toggleMenu} className="text-2xl">
+                  <FaTimes /> {/* Icône pour quitter */}
+                </button>
+              </div>
+
+              {/* Liens du menu */}
+              {/* Liens du menu */}
+              <div className="flex border-t mt-5 border-b flex-col divide-y ">
+                <div className="hover:text-NavBar_col">
+                  <Typography variant="NavText" theme="gray">
+                    <p className="pt-[10px] pb-[10px] hover:bg-gray-100 transition-all ease-in-out duration-300 hover:pl-2 ">Nos services</p>
+                  </Typography>
+                </div>
+                <div className="hover:text-NavBar_col">
+                  <Typography variant="NavText" theme="gray">
+                    <p className="pt-[10px] pb-[10px] hover:bg-gray-100  transition-all ease-in-out duration-300 hover:pl-2 ">Nos tarifs</p>
+                  </Typography>
+                </div>
+                <div className="hover:text-NavBar_col">
+                  <Typography variant="NavText" theme="gray">
+                    <p className="pt-[10px] pb-[10px] hover:bg-gray-100  transition-all ease-in-out duration-300 hover:pl-2 ">
+                      Comment ça marche ?
+                    </p>
+                  </Typography>
+                </div>
+              </div>
+
+              {/* Boutons dans le menu */}
+              <div className="flex flex-col gap-4 mt-6">
+                <Button variant="besoinAide">Besoin d’aide</Button>
+                <Button variant="demanderDemo">Demander une démo</Button>
+              </div>
+            </div>
+          )}
+        </Container>
+      </Container_Nav>
+    </div>
   );
 }

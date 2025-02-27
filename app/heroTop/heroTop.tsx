@@ -1,3 +1,5 @@
+'use client';
+
 import { Container_Hero } from "../ui/designSystem/component/Container_hero/Container_hero";
 import { Button } from "@/app/ui/designSystem/button/buttons";
 import { Typography } from "@/app/ui/designSystem/component/Typo/Typography";
@@ -7,14 +9,14 @@ import React from "react";
 export default function HeroTop() {
   return (
     <>
-      <div className="w-screen flex flex-col mt-11 xs:mt-0 px-4  flex-wrap   p-20">
-        <div className="w-screen flex   md:flex-col md:items-center gap-20 px-4 ">
+      <div className="w-screen flex flex-col mt-11 xs:mt-0 px-4 p-20">
+        <div className="w-screen flex flex-col md:flex-row md:gap-20 gap-10 px-4">
           {/* Section Texte */}
-          <div className="flex flex-col w-full md:px-16 md:items-center  xs:text-center  h-full   2xl:w-1/2  ">
+          <div className="flex flex-col w-full md:px-16 md:items-start xs:text-center h-full md:w-1/2">
             <Typography
               variant="Heading_hero_section"
               theme="black"
-               className="font-semibold flex"
+              className="font-semibold text-center md:text-left"
             >
               Simplifiez et sécurisez <br /> vos paiements avec <br /> PayTic
             </Typography>
@@ -22,17 +24,17 @@ export default function HeroTop() {
             <Typography
               variant="Supporting_text_hero_section"
               theme="gray"
-              className="  mt-4 text-left w-full xs:px-7 xs:text-center  flex  "
+              className="mt-4 md:text-center text-left "
             >
-              La solution idéale pour les entreprises, commerçants 
-              et entrepreneurs qui souhaitent une gestion efficace 
+              La solution idéale pour les entreprises, commerçants
+              et entrepreneurs qui souhaitent une gestion efficace
               et rapide des paiements en ligne.
             </Typography>
 
-            <div className="mt-4 text-left xs:justify-center w-full xs:gap-3   gap-7 flex">
+            <div className="mt-4 flex flex-col xs:flex-row md:flex-row xs:justify-center gap-3">
               <Button
                 variant="demo"
-                className="flex flex-row gap-3 justify-end items-center"
+                className="flex flex-row gap-3 justify-center xs:justify-start items-center"
               >
                 <Image
                   src="asset/Icon.svg"
@@ -42,15 +44,18 @@ export default function HeroTop() {
                 />
                 Demo
               </Button>
-              <Button variant="nousContacter">Nous contacter</Button>
+              <Button variant="nousContacter" className="xs:mt-0">
+                Nous contacter
+              </Button>
             </div>
           </div>
+
           {/* Section Image */}
-          <div className=" rounded-lg hidden md:block md:w-full    h-[640px] w-1/2 bg-cover bg-[30%] bg-[url(/asset/img.jpg)]">
+          <div className="rounded-lg hidden md:mr-16 md:block md:w-1/2 h-[640px] bg-cover  bg-[30%] bg-[url(/asset/img.jpg)]">
             {/* <img
               src="/asset/img.jpg"
               alt="Icon_play.svg"
-              className=" w-full h-full "
+              className="w-full h-full"
             /> */}
           </div>
         </div>
