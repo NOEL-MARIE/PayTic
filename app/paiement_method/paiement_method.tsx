@@ -5,7 +5,7 @@ import { Button } from "../ui/designSystem/Typo/button/buttons";
 
 export default function Paiement_method() {
   return (
-    <div className=" mb-60 md:pb-0 justify-center items-center md:mb-0 md:pt-16 lg:mb-32 sm:pt-48 pt-96 mt-32  flex flex-col    px-4  md:px-8  ">
+    <div className=" mb-6 md:pb-0 justify-centr items-enter md:mb-0 md:pt-16 lg:mb-16 sm:pt-48 pt-9 mt-3  flex flex-col    px-4  md:px-8  ">
       {/* Contenu principal */}
       <div className="  flex flex-col items-center gap-8  text-center">
         

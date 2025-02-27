@@ -55,27 +55,24 @@ export const HW_Dash = () => {
   }, [activeSection]); // S'exécute à chaque changement de `activeSection`
 
   return (
-    <div className="w-screen md:mt-0 md:pt-0 mb-36 justify-center  xs:mt-64 flex flex-col  md:px-8">
+    <div className="w-screen md:mt-0 md:pt-0 mb-3    flex flex-col  md:px-8">
       <div className="w-screen xs:px-9 flex flex-col md:px-10">
         {/* Titre principal de la page */}
-        <div className="w-full xs:justify-center lg:mt-10 lg:mb-0 mt-96  flex flex-col md:flex-row md:justify-between px-9  items-center mb-8">
+        <div className="w-full xs:justify-center lg:mt-10 lg:mb-0 mt-9  flex flex-col md:flex-row md:justify-between px-9  items-center mb-8">
           <Typography
             variant="Heading_feature_section"
-            className="text-left "
+            className=" text-center sm:text-left "
           >
             Comment ça marche ?
           </Typography>
-          <Button
-            variant="Demander une démo"
-            className="  "
-          >
+          <Button variant="Demander une démo" className="  ">
             Commencer maintenant
           </Button>
         </div>
 
-        <div className="flex w-full h-full mb-10 items-center relative flex-col md:flex-row">
+        <div className="flex  mb-10 items-center relative flex-col md:flex-row">
           {/* Barre latérale contenant les sections et l'indicateur */}
-          <div className="w-full md:w-1/2 h-full p-6 space-y-4 cursor-pointer relative flex flex-col justify-center items-center md:items-start">
+          <div className=" md:w-1/2 h-full p-6 space-y-4 cursor-pointer relative flex flex-col justify-center items-center md:items-start">
             {/* Indicateur animé avec Framer Motion */}
             <motion.div
               className="z-10 absolute left-2 w-1 bg-blue-500"
@@ -88,7 +85,9 @@ export const HW_Dash = () => {
             {sections.map((section, index) => (
               <div
                 key={index}
-                ref={(el) => { buttonsRef.current[index] = el; }} // Associe chaque bouton à sa référence dans le tableau `buttonsRef`
+                ref={(el) => {
+                  buttonsRef.current[index] = el;
+                }} // Associe chaque bouton à sa référence dans le tableau `buttonsRef`
                 onClick={() => setActiveSection(index)} // Met à jour la section active
                 className={`cursor-pointer flex items-center px-4 py-2 rounded-md transition duration-200 relative w-full ${
                   activeSection === index // Si cette section est active, applique un style spécifique
@@ -122,7 +121,7 @@ export const HW_Dash = () => {
                 alt={`Image pour ${sections[activeSection].title}`}
                 // width={100} // Largeur de l'image réduite
                 // height={100} // Hauteur de l'image réduite
-                className=" xs:pb-72  md:pb-0 max-w-full  flex  " // Ajustement supplémentaire pour la taille
+                className=" xs:pb-7  md:pb-0 max-w-full  flex  " // Ajustement supplémentaire pour la taille
               />
             </motion.div>
           </div>
