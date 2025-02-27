@@ -8,12 +8,12 @@ import "./globals.css";
 // Déclaration de la police Inria Sans
 
 const inriaSans = localFont({
-  src: "@/app/Fonts/InriaSans-Light.ttf",
+  src: "@/app/Font/InriaSans-Light.ttf",
   variable: "--font-inria-sans",
   weight: "400",
 });
 const Inter = localFont({
-  src: "@/app/Fonts/Inter_18pt-Light.ttf",
+  src: "@/app/Font/Inter_18pt-Light.ttf",
   variable: "--font-Inter",
   weight: "400",
 });
