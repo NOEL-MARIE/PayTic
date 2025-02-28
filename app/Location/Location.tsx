@@ -14,7 +14,7 @@ export default function Location() {
     <div className="   lg:pt-20 lg:pb-20 xs:pt-6 flex pb-7 flex-col lg:flex-row items-center justify-center gap-1 bg-feature">
       {/* Section Texte & Formulaire */}
       <div className="flex flex-col items-start justify-center text-center md:text-left ">
-        <div className="xs:px-6">
+        <div className="xs:px-6 space-y-11">
           <Typography variant="Heading_feature_section">
             Où nous sommes disponibles ?
           </Typography>
@@ -41,18 +41,18 @@ export default function Location() {
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 placeholder="Saisissez votre e-mail"
-                className="   px-4  border border-gray-300 rounded-md outline-none focus:ring-2 focus:ring-indigo-500"
+                className=" font-Inter  px-4  border border-gray-300 rounded-md text-black outline-none focus:ring-2 focus:ring-indigo-500"
                 required
               />
               {/* Bouton d'abonnement */}
               <button
                 type="submit"
-                className="px-6 py-2 rounded-md bg-indigo-600 text-white hover:bg-indigo-700 transition"
+                className="px-6 py-2 rounded-md font-Inter bg-indigo-600 text-white hover:bg-indigo-700 transition"
               >
                 S'abonner
               </button>
             </form>
-            <p className="text-sm  mt-2">S'inscrire à notre newsletter.</p>
+            <p  className="text-sm  text-[#454545] font-Inter  mt-2">S'inscrire à notre newsletter.</p>
           </div>
         </div>
       </div>

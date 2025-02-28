@@ -12,7 +12,7 @@ export const Container_Nav = ({ children, className }: Props) => {
     <div
       className={clsx(
         className,
-       "   mt-3 flex justify-between items-center "
+       "   mt-3 flex  "
       )}
     >
       {children}

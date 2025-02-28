@@ -59,7 +59,7 @@ export const Typography = ({
       break;
     case "NavText":
       variant_styles =
-        "   md:text-[10px]  cursor-pointer text-text_navigation text-semibold  font-semibold text-[16px]  ";
+        "   md:text-[16px]  cursor-pointer text-text_navigation text-semibold  font-semibold text-[16px]  ";
       break;
     case "HeaderIcon_Section": // Ajout du style pour le header icon section
       variant_styles = " text-semibold font-semibold text-[20px]   text-center";

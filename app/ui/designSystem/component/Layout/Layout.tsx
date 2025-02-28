@@ -13,8 +13,8 @@ export default function Layout({ children }: Props) {
     <>
       {/* Ajout de max-w-6xl */}
       <NavBar />
-        {children}
-   
+      {children}
+
       <Footer />
     </>
   );

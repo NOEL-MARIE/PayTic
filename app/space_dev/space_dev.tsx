@@ -12,7 +12,7 @@ export default function Space_dev() {
             <Typography variant="Heading_feature_section">
               Espace Développeur
             </Typography>
-            <Typography variant="Supporting_text_feature_section">
+            <Typography variant="Supporting_text_feature_section" theme="gray">
               Accédez à notre documentation API, guides d’intégration <br /> et
               outils dédiés aux développeurs.
             </Typography>
@@ -20,13 +20,13 @@ export default function Space_dev() {
 
           <div className="flex flex-row ">
             {/* Image */}
-            <div className="  hidden md:block justify-center items-center mt-10">
+            <div className=" w-full h-full  hidden md:block justify-center items-center mt-10">
               <Image
                 src="/asset/Content(1).svg"
                 width={600}
                 height={560}
                 alt=""
-                className="rounded-lg  h-auto"
+                className="rounded-lg"
               />
             </div>
             {/* Liste des avantages */}
@@ -34,6 +34,7 @@ export default function Space_dev() {
               <Typography
                 variant="Supporting_text_feature_section"
                 className=" "
+                theme="gray"
               >
                 Notre API permet une intégration fluide et sécurisée avec vos{" "}
                 plateformes existantes, que ce soit pour le e-commerce, les
@@ -42,7 +43,7 @@ export default function Space_dev() {
 
               <div className="space-y-4 md: ml-9 mt-5 ">
                 {/* Premier bloc */}
-                <div className=" flex flex-col items-center md:flex-row md:items-center  space-x-4">
+                <div className=" flex  flex-col items-center md:flex-row md:items-center  space-x-4">
                   <Image
                     src="/asset/check-circle.svg"
                     width={28}
@@ -53,12 +54,12 @@ export default function Space_dev() {
                   <Typography
                     theme="gray"
                     variant="Supporting_text_feature_section"
-                    className="flex gap-1 flex-col md:flex-row text-center items-center "
+                    className="flex    flex-col md:flex-row gap-1 text-center items-center "
                   >
-                    <p className="font-extrabold text-center">
+                    <p className="font-extrabold text-center text-[17px]">
                       Endpoints sécurisés
-                    </p>{" "}
-                    pour gérer vos paiements et transactions
+                    </p>
+                    {" "}pour gérer vos paiements et transactions
                   </Typography>
                 </div>
                 {/* Premier bloc */}
@@ -73,9 +74,9 @@ export default function Space_dev() {
                   <Typography
                     theme="gray"
                     variant="Supporting_text_feature_section"
-                    className="flex gap-1 flex-col md:flex-row text-center items-center "
+                    className="flex gap-1 flex-col md:flex-row text-center items-center  "
                   >
-                    <p className="font-extrabold text-center">
+                    <p className="font-extrabold text-center text-[17px]">
                       Webhooks et SDKs
                     </p>{" "}
                     pour automatiser vos processus
@@ -95,7 +96,7 @@ export default function Space_dev() {
                     variant="Supporting_text_feature_section"
                     className="flex gap-1 flex-col md:flex-row text-center items-center "
                   >
-                    <p className="font-extrabold text-center">
+                    <p className="font-extrabold text-center text-[17px]">
                       Assistance technique
                     </p>{" "}
                     dédiée pour vous accompagner

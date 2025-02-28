@@ -17,7 +17,7 @@ export const Featured_section = () => {
               À propos de PayTic
             </Typography>
             <Typography
-              className="xs:flex     text-center md:text-left   flex  "
+              className="xs:flex w-[768px] h-[44px]    text-wrap text-center md:text-left   flex  "
               variant="Supporting_text_feature_section"
               theme="gray"
             >
@@ -55,10 +55,10 @@ export const Featured_section = () => {
 
                 {/* Texte à droite en md, avec titre en haut et description en bas */}
                 <div className="flex flex-col text-center md:text-start">
-                  <Typography variant="Text_Icon_Heading">
+                  <Typography variant="Text_Icon_Heading" theme="gray">
                     Sécurité avancée et conformité
                   </Typography>
-                  <Typography variant="Text_Icon_Supporting_text">
+                  <Typography variant="Text_Icon_Supporting_text" theme="gray">
                     Protégez vos paiements avec une sécurité optimale et une
                     conformité aux régulations locales.
                   </Typography>
@@ -78,10 +78,10 @@ export const Featured_section = () => {
 
                 {/* Texte à droite en md, avec titre en haut et description en bas */}
                 <div className="flex flex-col text-center md:text-start">
-                  <Typography variant="Text_Icon_Heading">
+                  <Typography variant="Text_Icon_Heading" theme="gray">
                     Transactions instantanées
                   </Typography>
-                  <Typography variant="Text_Icon_Supporting_text">
+                  <Typography variant="Text_Icon_Supporting_text" theme="gray">
                     Envoyez et recevez vos paiements en temps réel, sans délai
                     ni contrainte.
                   </Typography>
@@ -101,10 +101,10 @@ export const Featured_section = () => {
 
                 {/* Texte à droite en md, avec titre en haut et description en bas */}
                 <div className="flex flex-col text-center md:text-start">
-                  <Typography variant="Text_Icon_Heading">
+                  <Typography variant="Text_Icon_Heading" theme="gray">
                     Interface intuitive et intégration facile
                   </Typography>
-                  <Typography variant="Text_Icon_Supporting_text">
+                  <Typography variant="Text_Icon_Supporting_text" theme="gray">
                     Une plateforme fluide avec une API puissante pour une
                     gestion simplifiée.
                   </Typography>

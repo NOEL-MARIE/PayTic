@@ -8,7 +8,7 @@ import Space_dev from "@/app/space_dev/space_dev";
 
 export const LandingPageView = () => {
   return (
-    <div className="max-w-6xl   mx-auto ">
+    <div className="">
       <HeroTop />
       <Featured_section />
       <HowToWork />

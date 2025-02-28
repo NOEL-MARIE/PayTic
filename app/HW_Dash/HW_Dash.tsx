@@ -99,8 +99,8 @@ export const HW_Dash = () => {
                   {/* Affichage de l'image à côté du titre de la section */}
 
                   <div className="ml-4">
-                    <div className="text-lg font-Inter">{section.title}</div>
-                    <div className="text-sm text-gray-600 w-full">
+                    <div className="text-lg font-inriasans">{section.title}</div>
+                    <div className="text-sm font-Inter text-gray-600 w-full">
                       {section.subTitle}
                     </div>
                   </div>

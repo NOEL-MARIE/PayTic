@@ -26,7 +26,7 @@ export const Footer = () => {
               height={32}
               className="w-[112px] h-auto"
             />
-            <div className="flex flex-col md:text-[11px] md:flex-row gap-5">
+            <div className="flex font-Inter flex-col md:text-[11px] md:flex-row gap-5">
               <Typography
                 variant="Supporting_text_hero_section"
                 theme="white"
@@ -53,9 +53,7 @@ export const Footer = () => {
 
           {/* Formulaire d'inscription à la newsletter */}
           <div className="w-full md:w-1/2 flex flex-col 2xl:items-end  md:items-start gap-4">
-            <p className="   font-medium">
-              S'inscrire à notre newsletter
-            </p>
+            <p className="   font-medium">S'inscrire à notre newsletter</p>
             <form
               onSubmit={handleSubmit}
               className="flex flex-col md:flex-row items-center md:items-end 2xl:items-end gap-3 w-full md:w-auto"
@@ -65,12 +63,12 @@ export const Footer = () => {
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 placeholder="Saisissez votre e-mail"
-                className="w-full md:w-[190px] h-[44px] px-4 border border-gray-300 rounded-md outline-none focus:ring-2 focus:ring-indigo-500"
+                className="w-full md:w-[190px] font-Inter h-[44px] px-4 border border-gray-300 rounded-md outline-none focus:ring-2 focus:ring-indigo-500"
                 required
               />
               <button
                 type="submit"
-                className="w-full md:w-auto h-[44px] flex items-center justify-center px-4 border border-gray-300 rounded-md bg-NavBar_col text-white hover:bg-indigo-700 transition"
+                className="w-full md:w-auto h-[44px] font-Inter flex items-center justify-center px-4 border border-gray-300 rounded-md bg-btn_col text-white hover:bg-indigo-700 transition"
               >
                 S'abonner
               </button>
@@ -79,7 +77,7 @@ export const Footer = () => {
         </div>
 
         {/* Ligne de séparation et mentions légales */}
-        <div className="w-full border-t border-[#EDFAFF1A] pt-6 flex flex-col md:flex-row md justify-between items-center gap-4 text-sm text-gray-600">
+        <div className="w-full border-t border-[#EDFAFF1A] font-Inter pt-6 flex flex-col md:flex-row md justify-between items-center gap-4 text-sm text-gray-600">
           <Typography variant="Supporting_text_hero_section" theme="white">
             © {currentYear} DevStudio. Tous droits réservés.
           </Typography>
