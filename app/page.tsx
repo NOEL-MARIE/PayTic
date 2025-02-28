@@ -5,7 +5,7 @@ export default function Home() {
   return (
 
 
-    <Layout ClassName="w-screen h-screen ">
+    <Layout ClassName=" ">
       <LandingPageContainer />
     </Layout>
   );

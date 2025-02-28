@@ -11,9 +11,9 @@ export default function Location() {
   };
 
   return (
-    <div className="w-full sm:mt-80 lg:mt-0 l lg:pt-20 lg:pb-20 xs:pt-6 flex pb-7 flex-col-reverse lg:flex-row items-center justify-center gap-10 px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 bg-feature">
+    <div className="   lg:pt-20 lg:pb-20 xs:pt-6 flex pb-7 flex-col lg:flex-row items-center justify-center gap-1 bg-feature">
       {/* Section Texte & Formulaire */}
-      <div className="flex flex-col items-start justify-center text-center lg:text-left max-w-2xl">
+      <div className="flex flex-col items-start justify-center text-center md:text-left ">
         <div className="xs:px-6">
           <Typography variant="Heading_feature_section">
             Où nous sommes disponibles ?
@@ -29,33 +29,32 @@ export default function Location() {
               PayTic arrive bientôt près de chez vous !
             </span>
           </Typography>
-        {/* Formulaire */}
-        <div className="w-full mt-6">
-          <form
-            onSubmit={handleSubmit}
-            className="flex flex-col   sm:flex-row gap-4 w-full"
-          >
-            {/* Champ de saisie */}
-            <input
-              type="email"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-              placeholder="Saisissez votre e-mail"
-              className="flex-1  px-4 py-2 border border-gray-300 rounded-md outline-none focus:ring-2 focus:ring-indigo-500"
-              required
-            />
-            {/* Bouton d'abonnement */}
-            <button
-              type="submit"
-              className="px-6 py-2 rounded-md bg-indigo-600 text-white hover:bg-indigo-700 transition"
+          {/* Formulaire */}
+          <div className=" mt-6">
+            <form
+              onSubmit={handleSubmit}
+              className="flex flex-col   sm:flex-row gap-4"
             >
-              S'abonner
-            </button>
-          </form>
-          <p className="text-sm  mt-2">S'inscrire à notre newsletter.</p>
+              {/* Champ de saisie */}
+              <input
+                type="email"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                placeholder="Saisissez votre e-mail"
+                className="   px-4  border border-gray-300 rounded-md outline-none focus:ring-2 focus:ring-indigo-500"
+                required
+              />
+              {/* Bouton d'abonnement */}
+              <button
+                type="submit"
+                className="px-6 py-2 rounded-md bg-indigo-600 text-white hover:bg-indigo-700 transition"
+              >
+                S'abonner
+              </button>
+            </form>
+            <p className="text-sm  mt-2">S'inscrire à notre newsletter.</p>
+          </div>
         </div>
-        </div>
-
       </div>
 
       {/* Image adaptative */}

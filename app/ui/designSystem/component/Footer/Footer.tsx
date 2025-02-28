@@ -16,7 +16,7 @@ export const Footer = () => {
   return (
     <Container_Footer>
       <div className="  w-full    flex flex-col md:items-start  md:justify-between gap-5 ">
-        <div className="flex flex-col md:flex-row justify-between items-center w-full gap-8 ">
+        <div className="flex flex-col md:flex-row justify-between items-center w-full gap-8 pb-14 ">
           {/* Bloc logo & liens */}
           <div className="flex flex-col items-start w-full md: gap-5">
             <Image
@@ -30,21 +30,21 @@ export const Footer = () => {
               <Typography
                 variant="Supporting_text_hero_section"
                 theme="white"
-                className="cursor-pointer hover:text-indigo-600"
+                className="cursor-pointer hover:text-Nbg-NavBar_col"
               >
                 Nos services
               </Typography>
               <Typography
                 variant="Supporting_text_hero_section"
                 theme="white"
-                className="cursor-pointer hover:text-indigo-600"
+                className="cursor-pointer hover:text-Nbg-NavBar_col"
               >
                 Comment ça marche ?
               </Typography>
               <Typography
                 variant="Supporting_text_hero_section"
                 theme="white"
-                className="cursor-pointer hover:text-indigo-600"
+                className="cursor-pointer hover:text-Nbg-NavBar_col"
               >
                 Documentation API
               </Typography>
@@ -70,7 +70,7 @@ export const Footer = () => {
               />
               <button
                 type="submit"
-                className="w-full md:w-auto h-[44px] flex items-center justify-center px-4 border border-gray-300 rounded-md bg-indigo-600 text-white hover:bg-indigo-700 transition"
+                className="w-full md:w-auto h-[44px] flex items-center justify-center px-4 border border-gray-300 rounded-md bg-NavBar_col text-white hover:bg-indigo-700 transition"
               >
                 S'abonner
               </button>
@@ -79,7 +79,7 @@ export const Footer = () => {
         </div>
 
         {/* Ligne de séparation et mentions légales */}
-        <div className="w-full border-t border-gray-300 pt-6 flex flex-col md:flex-row md justify-between items-center gap-4 text-sm text-gray-600">
+        <div className="w-full border-t border-[#EDFAFF1A] pt-6 flex flex-col md:flex-row md justify-between items-center gap-4 text-sm text-gray-600">
           <Typography variant="Supporting_text_hero_section" theme="white">
             © {currentYear} DevStudio. Tous droits réservés.
           </Typography>

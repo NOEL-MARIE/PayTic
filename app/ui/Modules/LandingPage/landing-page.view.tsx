@@ -8,7 +8,7 @@ import Space_dev from "@/app/space_dev/space_dev";
 
 export const LandingPageView = () => {
   return (
-    <div className="w-screen overflow-x-hidden">
+    <div className="max-w-6xl   mx-auto ">
       <HeroTop />
       <Featured_section />
       <HowToWork />

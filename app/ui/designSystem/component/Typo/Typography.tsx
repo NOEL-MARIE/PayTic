@@ -31,11 +31,11 @@ export const Typography = ({
   switch (variant) {
     case "Heading_hero_section":
       variant_styles =
-        "font-[Inria Sans] xs:text-[34px] font-bold md:text-[56px] text-[49px] leading-[64px]  tracking-[-0.02em]";
+        "font-[Inria Sans] xs:text-[34px] font-bold md:text-[51px] text-[49px] leading-[64px]  tracking-[-0.02em]";
       break;
     case "Supporting_text_hero_section":
       variant_styles =
-        "font-[Inter] xs:text-[17px] font-normal text-[18px] text-text_navigation leading-[26px] tracking-[0em]";
+        "font-[Inter] xs:text-[17px] font-normal text-[18px]  text-text_navigation leading-[26px] tracking-[0em]";
       break;
     case "Heading_feature_section":
       variant_styles =
@@ -48,11 +48,11 @@ export const Typography = ({
       break;
     case "Text_Icon_Heading":
       variant_styles =
-        "font-[Inria Sans] Md:text-[17px] font-bold text-[20px] leading-[30px] tracking-[0em]";
+        "font-[Inria Sans] md:text-[15px] font-bold text-[20px] leading-[30px] tracking-[0em]";
       break;
     case "Text_Icon_Supporting_text":
       variant_styles =
-        "font-[Inter] font-normal text-[16px] leading-[24px] tracking-[0em]";
+        "font-[Inter] font-normal  text-[16px] leading-[24px] tracking-[0em]";
       break;
     case "Button_text":
       variant_styles =
