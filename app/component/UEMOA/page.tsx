@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { motion } from "framer-motion"; // Importation de Framer Motion
+import { motion } from "framer-motion";
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -11,7 +11,7 @@ const sectionVariants = {
   visible: { y: 0, opacity: 1, transition: { duration: 0.5 } },
 };
 
-const UemoaPage = () => {
+export default function UemoaPage() {
   return (
     <motion.div
       className="container mx-auto p-4"
@@ -213,6 +213,4 @@ const UemoaPage = () => {
       </motion.div>
     </motion.div>
   );
-};
-
-export default UemoaPage;
+}
