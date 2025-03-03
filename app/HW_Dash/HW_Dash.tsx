@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 import { Typography } from "../ui/designSystem/component/Typo/Typography";
 import { Button } from "../ui/designSystem/Typo/button/buttons";
 import Image from "next/image"; // Importation du composant Image
+import Link from "next/link";
 
 export const HW_Dash = () => {
   // État pour suivre la section active
@@ -57,23 +58,37 @@ export const HW_Dash = () => {
   return (
     <div className="max-w-6xl mx-auto w-full px-4">
       <div className=" md:mt-0 md:pt-0 mb-3    flex flex-col  ">
-        <div className="  flex flex-col ">
+        <div className=" gap-4 flex flex-col ">
           {/* Titre principal de la page */}
-          <div className="w-full xs:justify-center lg:mt-10 lg:mb-0 mt-9  flex flex-col md:flex-row md:justify-between   items-center mb-8">
+          <motion.div
+            className="w-full  xs:justify-center lg:mt-10 lg:mb-0 mt-9  flex flex-col md:flex-row md:justify-between   items-center mb-8"
+            initial={{ opacity: 0, y: 20 }} // Animation d'apparition (légère montée)
+            whileInView={{ opacity: 1, y: 0 }} // Animation pour rendre l'élément complètement visible
+            viewport={{ once: true }} // Déclencher une seule fois
+            transition={{ duration: 0.5 }} // Durée de la transition
+          >
             <Typography
               variant="Heading_feature_section"
               className=" text-center sm:text-left "
             >
               Comment ça marche ?
             </Typography>
-            <Button variant="Demander une démo" className="  ">
-              Commencer maintenant
-            </Button>
-          </div>
+            <Link href="/get-started">
+              <Button variant="Demander une démo" className="  ">
+                Commencer maintenant
+              </Button>
+            </Link>
+          </motion.div>
 
           <div className="flex  mb-10 items-center relative flex-col md:flex-row">
             {/* Barre latérale contenant les sections et l'indicateur */}
-            <div className=" md:w-1/2 h-full p-6 space-y-4 cursor-pointer relative flex flex-col justify-center items-center md:items-start">
+            <motion.div
+              className=" md:w-1/2 h-full p-6 space-y-4 cursor-pointer relative flex flex-col justify-center items-center md:items-start"
+              initial={{ opacity: 0, x: -100 }} // Animation de départ (caché à gauche)
+              whileInView={{ opacity: 1, x: 0 }} // Animation de glissement et apparition
+              viewport={{ once: true }} // Déclencher une seule fois
+              transition={{ duration: 0.5, delay: 0.2 }} // Durée et retard
+            >
               {/* Indicateur animé avec Framer Motion */}
               <motion.div
                 className="z-10 absolute left-2 w-1 bg-blue-500"
@@ -99,33 +114,34 @@ export const HW_Dash = () => {
                   {/* Affichage de l'image à côté du titre de la section */}
 
                   <div className="ml-4">
-                    <div className="text-lg font-inriasans">{section.title}</div>
+                    <div className="text-lg font-inriasans">
+                      {section.title}
+                    </div>
                     <div className="text-sm font-Inter text-gray-600 w-full">
                       {section.subTitle}
                     </div>
                   </div>
                 </div>
               ))}
-            </div>
+            </motion.div>
 
             {/* Contenu principal affichant la section active */}
-            <div className="w-full h-full  pt-6">
-              <motion.div
-                key={activeSection} // Permet à Framer Motion de réanimer à chaque changement de section
-                initial={{ opacity: 0, y: 20 }} // Animation d'apparition (légère montée)
-                animate={{ opacity: 1, y: 0 }} // Animation pour rendre l'élément complètement visible
-                transition={{ duration: 0.5 }} // Durée de la transition
-                className="flex  justify-end items-center"
-              >
-                <img
-                  src={sections[activeSection].image} // Image spécifique à la section active
-                  alt={`Image pour ${sections[activeSection].title}`}
-                  // width={100} // Largeur de l'image réduite
-                  // height={100} // Hauteur de l'image réduite
-                  className=" xs:pb-7  md:pb-0  flex  " // Ajustement supplémentaire pour la taille
-                />
-              </motion.div>
-            </div>
+            <motion.div
+              key={activeSection} // Permet à Framer Motion de réanimer à chaque changement de section
+              initial={{ opacity: 0, y: 20 }} // Animation d'apparition (légère montée)
+              whileInView={{ opacity: 1, y: 0 }} // Animation pour rendre l'élément complètement visible
+              viewport={{ once: true }} // Déclencher une seule fois
+              transition={{ duration: 0.5, delay: 0.4 }} // Durée et retard
+              className="flex  justify-end items-center"
+            >
+              <img
+                src={sections[activeSection].image} // Image spécifique à la section active
+                alt={`Image pour ${sections[activeSection].title}`}
+                // width={100} // Largeur de l'image réduite
+                // height={100} // Hauteur de l'image réduite
+                className=" xs:pb-7  md:pb-0  flex  " // Ajustement supplémentaire pour la taille
+              />
+            </motion.div>
           </div>
         </div>
       </div>

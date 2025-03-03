@@ -2,6 +2,8 @@
 import React, { useState } from "react";
 import { Typography } from "../ui/designSystem/component/Typo/Typography";
 import Image from "next/image";
+import { motion } from "framer-motion"; // Importation de Framer Motion
+import { Button } from "../ui/designSystem/button/buttons";
 
 export default function Location() {
   const [email, setEmail] = useState("");
@@ -13,7 +15,13 @@ export default function Location() {
   return (
     <div className="   lg:pt-20 lg:pb-20 xs:pt-6 flex pb-7 flex-col lg:flex-row items-center justify-center gap-1 bg-feature">
       {/* Section Texte & Formulaire */}
-      <div className="flex flex-col items-start justify-center text-center md:text-left ">
+      <motion.div
+        className="flex flex-col items-start justify-center text-center md:text-left "
+        initial={{ opacity: 0, x: -100 }} // Animation de départ (caché à gauche)
+        whileInView={{ opacity: 1, x: 0 }} // Animation de glissement et apparition
+        viewport={{ once: true }} // Déclencher une seule fois
+        transition={{ duration: 0.5 }} // Durée de l'animation
+      >
         <div className="xs:px-6 space-y-11">
           <Typography variant="Heading_feature_section">
             Où nous sommes disponibles ?
@@ -45,20 +53,29 @@ export default function Location() {
                 required
               />
               {/* Bouton d'abonnement */}
-              <button
+              <Button
+                variant="sAbonner"
                 type="submit"
-                className="px-6 py-2 rounded-md font-Inter bg-indigo-600 text-white hover:bg-indigo-700 transition"
+                className="px-6 py-2 rounded-md font-Inter bg-btn_col text-white hover:bg-indigo-700 transition"
               >
                 S'abonner
-              </button>
+              </Button>
             </form>
-            <p  className="text-sm  text-[#454545] font-Inter  mt-2">S'inscrire à notre newsletter.</p>
+            <p className="text-sm  text-[#454545] font-Inter  mt-2">
+              S'inscrire à notre newsletter.
+            </p>
           </div>
         </div>
-      </div>
+      </motion.div>
 
       {/* Image adaptative */}
-      <div className="flex justify-center ">
+      <motion.div
+        className="flex justify-center "
+        initial={{ opacity: 0, x: 100 }} // Animation de départ (caché à droite)
+        whileInView={{ opacity: 1, x: 0 }} // Animation de glissement et apparition
+        viewport={{ once: true }} // Déclencher une seule fois
+        transition={{ duration: 0.5, delay: 0.2 }} // Durée et retard
+      >
         <Image
           src="/asset/Group.svg"
           alt="Carte de disponibilité"
@@ -66,7 +83,7 @@ export default function Location() {
           height={550}
           className="w-full max-w-sm sm:max-w-md md:max-w-lg lg:max-w-xl  xl:max-w-2xl h-auto"
         />
-      </div>
+      </motion.div>
     </div>
   );
 }

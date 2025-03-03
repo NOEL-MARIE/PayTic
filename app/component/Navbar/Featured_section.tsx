@@ -1,36 +1,55 @@
+"use client";
 import React from "react";
-import { Typography } from "../../ui/designSystem/component/Typo/Typography";
+import { Typography } from "../../ui/designSystem/Typo/Typography";
 import Image from "next/image";
-import { Container_int } from "../../ui/designSystem/component/Container_hero/container_int";
+import { motion } from "framer-motion"; // Importation de Framer Motion
 
 export const Featured_section = () => {
   return (
     <div className="max-w-6xl mx-auto w-full px-4">
-      <div className="    flex flex-col mt-11     ">
-        <div className="   flex flex-col md:flex-col md:gap-20 gap-10   ">
-          <div className="flex gap-5 flex-col  ">
-            {" "}
-            <Typography
-              className="  text-left   md:justify-start justify-center flex"
-              variant="Heading_feature_section"
+      <div className="flex flex-col mt-11">
+        <div className="flex flex-col md:flex-col md:gap-20 gap-10">
+          <div className="flex gap-5 flex-col">
+            <motion.div
+              className="text-left md:justify-start justify-center flex"
+              initial={{ opacity: 0, x: -100 }} // Animation de départ
+              whileInView={{ opacity: 1, x: 0 }} // Animation de glissement
+              viewport={{ once: true }} // Déclencher une seule fois
+              transition={{ duration: 0.5 }} // Durée de l'animation
             >
-              À propos de PayTic
-            </Typography>
-            <Typography
-              className="xs:flex w-[768px] h-[44px]    text-wrap text-center md:text-left   flex  "
-              variant="Supporting_text_feature_section"
-              theme="gray"
+              <Typography variant="Heading_feature_section">
+                À propos de PayTic
+              </Typography>
+            </motion.div>
+
+            <motion.div
+              className="xs:flex w-[768px] h-[44px] text-wrap text-center md:text-left flex"
+              initial={{ opacity: 0, x: -100 }} // Animation de départ
+              whileInView={{ opacity: 1, x: 0 }} // Animation de glissement
+              viewport={{ once: true }} // Déclencher une seule fois
+              transition={{ duration: 0.5, delay: 0.2 }} // Durée et retard
             >
-              Nous croyons en un système de paiement fluide, rapide et
-              accessible à tous. PayTic vous offe une plateforme robuste pour
-              simplifier et sécuriser vos transactions financières.
-            </Typography>
+              <Typography
+                variant="Supporting_text_feature_section"
+                theme="gray"
+              >
+                Nous croyons en un système de paiement fluide, rapide et
+                accessible à tous. PayTic vous offre une plateforme robuste pour
+                simplifier et sécuriser vos transactions financières.
+              </Typography>
+            </motion.div>
           </div>
 
           {/* Section avec image et texte */}
-          <div className="flex flex-col xs:pb-20 sm:pb-20  gap-8 lg:gap-20 md:flex-row items-center justify-between">
+          <div className="flex flex-col xs:pb-20 sm:pb-20 gap-8 lg:gap-20 md:flex-row items-center justify-between">
             {/* Partie image */}
-            <div className="hidden md:block justify-center items-center lg: xs:h-1/2 w-full">
+            <motion.div
+              className="hidden md:block justify-center items-center lg: xs:h-1/2 w-full"
+              initial={{ opacity: 0, x: 100 }} // Animation de départ
+              whileInView={{ opacity: 1, x: 0 }} // Animation de glissement
+              viewport={{ once: true }} // Déclencher une seule fois
+              transition={{ duration: 0.5, delay: 0.4 }} // Durée et retard
+            >
               <Image
                 src="asset/Content.svg"
                 width={570}
@@ -38,13 +57,18 @@ export const Featured_section = () => {
                 alt="PayTic image"
                 className="w-full h-auto hidden md:block"
               />
-            </div>
+            </motion.div>
 
             {/* Partie texte */}
             <div className="flex flex-col gap-8 w-full justify-center items-center">
               {/* Bloc Sécurité */}
-              <div className="flex flex-col md:flex-row items-center md:items-start gap-4">
-                {/* Icône à gauche en md */}
+              <motion.div
+                className="flex flex-col md:flex-row items-center md:items-start gap-4"
+                initial={{ opacity: 0, y: 50 }} // Animation de départ
+                whileInView={{ opacity: 1, y: 0 }} // Animation de glissement
+                viewport={{ once: true }} // Déclencher une seule fois
+                transition={{ duration: 0.5, delay: 0.6 }} // Durée et retard
+              >
                 <Image
                   src="asset/Key.svg"
                   width={48}
@@ -52,8 +76,6 @@ export const Featured_section = () => {
                   alt="Sécurité"
                   className="mb-4 md:mb-0"
                 />
-
-                {/* Texte à droite en md, avec titre en haut et description en bas */}
                 <div className="flex flex-col text-center md:text-start">
                   <Typography variant="Text_Icon_Heading" theme="gray">
                     Sécurité avancée et conformité
@@ -63,11 +85,16 @@ export const Featured_section = () => {
                     conformité aux régulations locales.
                   </Typography>
                 </div>
-              </div>
+              </motion.div>
 
               {/* Bloc Transactions instantanées */}
-              <div className="flex flex-col md:flex-row items-center md:items-start gap-4">
-                {/* Icône à gauche en md */}
+              <motion.div
+                className="flex flex-col md:flex-row items-center md:items-start gap-4"
+                initial={{ opacity: 0, y: 50 }} // Animation de départ
+                whileInView={{ opacity: 1, y: 0 }} // Animation de glissement
+                viewport={{ once: true }} // Déclencher une seule fois
+                transition={{ duration: 0.5, delay: 0.8 }} // Durée et retard
+              >
                 <Image
                   src="asset/horloge.svg"
                   width={48}
@@ -75,8 +102,6 @@ export const Featured_section = () => {
                   alt="Transactions instantanées"
                   className="mb-4 md:mb-0"
                 />
-
-                {/* Texte à droite en md, avec titre en haut et description en bas */}
                 <div className="flex flex-col text-center md:text-start">
                   <Typography variant="Text_Icon_Heading" theme="gray">
                     Transactions instantanées
@@ -86,11 +111,16 @@ export const Featured_section = () => {
                     ni contrainte.
                   </Typography>
                 </div>
-              </div>
+              </motion.div>
 
               {/* Bloc Interface intuitive */}
-              <div className="flex flex-col md:flex-row items-center md:items-start gap-4">
-                {/* Icône à gauche en md */}
+              <motion.div
+                className="flex flex-col md:flex-row items-center md:items-start gap-4"
+                initial={{ opacity: 0, y: 50 }} // Animation de départ
+                whileInView={{ opacity: 1, y: 0 }} // Animation de glissement
+                viewport={{ once: true }} // Déclencher une seule fois
+                transition={{ duration: 0.5, delay: 1 }} // Durée et retard
+              >
                 <Image
                   src="asset/Star.svg"
                   width={48}
@@ -98,8 +128,6 @@ export const Featured_section = () => {
                   alt="Interface intuitive"
                   className="mb-4 md:mb-0"
                 />
-
-                {/* Texte à droite en md, avec titre en haut et description en bas */}
                 <div className="flex flex-col text-center md:text-start">
                   <Typography variant="Text_Icon_Heading" theme="gray">
                     Interface intuitive et intégration facile
@@ -109,7 +137,7 @@ export const Featured_section = () => {
                     gestion simplifiée.
                   </Typography>
                 </div>
-              </div>
+              </motion.div>
             </div>
           </div>
         </div>

@@ -8,6 +8,7 @@ interface ButtonProps {
     | "demo"
     | "nousContacter"
     | "sAbonner";
+  type?: "button" | "submit" | "reset"; // Ajout de la propriété type
   disabled?: boolean;
   className?: string;
   children?: React.ReactNode;
@@ -15,6 +16,7 @@ interface ButtonProps {
 
 export const Button = ({
   variant = "demanderDemo",
+  type = "button",  // Valeur par défaut "button"
   disabled,
   children,
   className,
@@ -45,7 +47,7 @@ export const Button = ({
 
   return (
     <button
-      type="button"
+      type={type}  // Utilisation de la prop `type`
       className={clsx(
         "px-4 py-2 rounded-md text-sm font-medium transition-all duration-300",
         variantStyles,
