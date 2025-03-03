@@ -47,13 +47,13 @@ export default function UemoaPage() {
             <p className="absolute top-0 left-0 right-0 text-center text-xs font-semibold text-gray-700">
               Bientôt disponible
             </p>
-            <Image
+            {/* <Image
               src="/asset/VISA.svg"
               alt="Bénin"
               width={24}
               height={24}
               className="w-full h-full grayscale opacity-60"
-            />
+            /> */}
           </div>
         </motion.div>
 
@@ -69,13 +69,13 @@ export default function UemoaPage() {
             <p className="absolute top-0 left-0 right-0 text-center text-xs font-semibold text-gray-700">
               Bientôt disponible
             </p>
-            <Image
+            {/* <Image
               src="/asset/T MONNEY.svg"
               alt="Burkina Faso"
               width={24}
               height={24}
               className="w-full h-full grayscale opacity-60"
-            />
+            /> */}
           </div>
         </motion.div>
 
@@ -91,13 +91,13 @@ export default function UemoaPage() {
             <p className="absolute top-0 left-0 right-0 text-center text-xs font-semibold text-gray-700">
               Bientôt disponible
             </p>
-            <Image
+            {/* <Image
               src="/asset/RéseauFREE.svg"
               alt="Côte d'Ivoire"
               width={24}
               height={24}
               className="w-full h-full grayscale opacity-60"
-            />
+            /> */}
           </div>
         </motion.div>
 
@@ -113,13 +113,13 @@ export default function UemoaPage() {
             <p className="absolute top-0 left-0 right-0 text-center text-xs font-semibold text-gray-700">
               Bientôt disponible
             </p>
-            <Image
+            {/* <Image
               src="/asset/MASTER CARD.svg"
               alt="Guinée-Bissau"
               width={24}
               height={24}
               className="w-full h-full grayscale opacity-60"
-            />
+            /> */}
           </div>
         </motion.div>
 
@@ -135,13 +135,13 @@ export default function UemoaPage() {
             <p className="absolute top-0 left-0 right-0 text-center text-xs font-semibold text-gray-700">
               Bientôt disponible
             </p>
-            <Image
+            {/* <Image
               src="/asset/MALI.svg"
               alt="Mali"
               width={24}
               height={24}
               className="w-full h-full grayscale opacity-60"
-            />
+            /> */}
           </div>
         </motion.div>
 
@@ -157,13 +157,13 @@ export default function UemoaPage() {
             <p className="absolute top-0 left-0 right-0 text-center text-xs font-semibold text-gray-700">
               Bientôt disponible
             </p>
-            <Image
+            {/* <Image
               src="/asset/NIGER.svg"
               alt="Niger"
               width={24}
               height={24}
               className="w-full h-full grayscale opacity-60"
-            />
+            /> */}
           </div>
         </motion.div>
 
@@ -179,13 +179,13 @@ export default function UemoaPage() {
             <p className="absolute top-0 left-0 right-0 text-center text-xs font-semibold text-gray-700">
               Bientôt disponible
             </p>
-            <Image
+            {/* <Image
               src="/asset/SENEGAL.svg"
               alt="Sénégal"
               width={24}
               height={24}
               className="w-full h-full grayscale opacity-60"
-            />
+            /> */}
           </div>
         </motion.div>
 
@@ -201,13 +201,13 @@ export default function UemoaPage() {
             <p className="absolute top-0 left-0 right-0 text-center text-xs font-semibold text-gray-700">
               Bientôt disponible
             </p>
-            <Image
+            {/* <Image
               src="/asset/TOGO.svg"
               alt="Togo"
               width={24}
               height={24}
               className="w-full h-full grayscale opacity-60"
-            />
+            /> */}
           </div>
         </motion.div>
       </motion.div>
