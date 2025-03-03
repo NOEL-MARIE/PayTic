@@ -11,7 +11,7 @@ const sectionVariants = {
   visible: { y: 0, opacity: 1, transition: { duration: 0.5 } },
 };
 
-const UEMOAPage = () => {
+const UemoaPage = () => {
   return (
     <motion.div
       className="container mx-auto p-4"
@@ -215,4 +215,4 @@ const UEMOAPage = () => {
   );
 };
 
-export default UEMOAPage;
+export default UemoaPage;
