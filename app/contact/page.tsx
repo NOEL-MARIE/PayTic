@@ -15,7 +15,7 @@ export default function ContactPage() {
 
   return (
     <motion.div
-      className="container mx-auto py-12"
+      className="container  max-w-6xl mx-auto w-full px-4 py-12"
       variants={containerVariants}
       initial="hidden"
       animate="visible"

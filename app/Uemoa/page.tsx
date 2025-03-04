@@ -12,204 +12,60 @@ const sectionVariants = {
 };
 
 export default function UemoaPage() {
+  const countries = [
+    { name: "Côte d'Ivoire", src: "/asset/CI.svg", alt: "Côte d'Ivoire" },
+    { name: "Bénin", src: "/asset/BJ.svg", alt: "Bénin" },
+    { name: "Burkina Faso", src: "/asset/BF.svg", alt: "Burkina Faso" },
+    { name: "Guinée-Bissau", src: "/asset/GW.svg", alt: "Guinée-Bissau" },
+    { name: "Mali", src: "/asset/ML.svg", alt: "Mali" },
+    { name: "Niger", src: "/asset/Niger.svg", alt: "Niger" },
+    { name: "Sénégal", src: "/asset/SN.svg", alt: "Sénégal" },
+    { name: "Togo", src: "/asset/TG.svg", alt: "Togo" },
+  ];
+
   return (
     <motion.div
-      className="container mx-auto p-4"
+      className="pt-8"
       variants={containerVariants}
       initial="hidden"
       animate="visible"
     >
-      <motion.h1
-        className="text-center text-3xl font-bold mb-8"
-        variants={sectionVariants}
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true }}
-      >
-        Drapeaux des pays de l'UEMOA
-      </motion.h1>
       <motion.div
-        className="grid grid-cols-4 gap-4"
+        className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4"
         variants={sectionVariants}
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true }}
       >
-        {/* Bénin */}
-        <motion.div
-          className="flex flex-col items-center"
-          variants={sectionVariants}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true }}
-        >
-          <div className="relative w-6 h-6">
-            <p className="absolute top-0 left-0 right-0 text-center text-xs font-semibold text-gray-700">
-              Bientôt disponible
-            </p>
-            {/* <Image
-              src="/asset/VISA.svg"
-              alt="Bénin"
-              width={24}
-              height={24}
-              className="w-full h-full grayscale opacity-60"
-            /> */}
-          </div>
-        </motion.div>
-
-        {/* Burkina Faso */}
-        <motion.div
-          className="flex flex-col items-center"
-          variants={sectionVariants}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true }}
-        >
-          <div className="relative w-6 h-6">
-            <p className="absolute top-0 left-0 right-0 text-center text-xs font-semibold text-gray-700">
-              Bientôt disponible
-            </p>
-            {/* <Image
-              src="/asset/T MONNEY.svg"
-              alt="Burkina Faso"
-              width={24}
-              height={24}
-              className="w-full h-full grayscale opacity-60"
-            /> */}
-          </div>
-        </motion.div>
-
-        {/* Côte d'Ivoire */}
-        <motion.div
-          className="flex flex-col items-center"
-          variants={sectionVariants}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true }}
-        >
-          <div className="relative w-6 h-6">
-            <p className="absolute top-0 left-0 right-0 text-center text-xs font-semibold text-gray-700">
-              Bientôt disponible
-            </p>
-            {/* <Image
-              src="/asset/RéseauFREE.svg"
-              alt="Côte d'Ivoire"
-              width={24}
-              height={24}
-              className="w-full h-full grayscale opacity-60"
-            /> */}
-          </div>
-        </motion.div>
-
-        {/* Guinée-Bissau */}
-        <motion.div
-          className="flex flex-col items-center"
-          variants={sectionVariants}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true }}
-        >
-          <div className="relative w-6 h-6">
-            <p className="absolute top-0 left-0 right-0 text-center text-xs font-semibold text-gray-700">
-              Bientôt disponible
-            </p>
-            {/* <Image
-              src="/asset/MASTER CARD.svg"
-              alt="Guinée-Bissau"
-              width={24}
-              height={24}
-              className="w-full h-full grayscale opacity-60"
-            /> */}
-          </div>
-        </motion.div>
-
-        {/* Mali */}
-        <motion.div
-          className="flex flex-col items-center"
-          variants={sectionVariants}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true }}
-        >
-          <div className="relative w-6 h-6">
-            <p className="absolute top-0 left-0 right-0 text-center text-xs font-semibold text-gray-700">
-              Bientôt disponible
-            </p>
-            {/* <Image
-              src="/asset/MALI.svg"
-              alt="Mali"
-              width={24}
-              height={24}
-              className="w-full h-full grayscale opacity-60"
-            /> */}
-          </div>
-        </motion.div>
-
-        {/* Niger */}
-        <motion.div
-          className="flex flex-col items-center"
-          variants={sectionVariants}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true }}
-        >
-          <div className="relative w-6 h-6">
-            <p className="absolute top-0 left-0 right-0 text-center text-xs font-semibold text-gray-700">
-              Bientôt disponible
-            </p>
-            {/* <Image
-              src="/asset/NIGER.svg"
-              alt="Niger"
-              width={24}
-              height={24}
-              className="w-full h-full grayscale opacity-60"
-            /> */}
-          </div>
-        </motion.div>
-
-        {/* Sénégal */}
-        <motion.div
-          className="flex flex-col items-center"
-          variants={sectionVariants}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true }}
-        >
-          <div className="relative w-6 h-6">
-            <p className="absolute top-0 left-0 right-0 text-center text-xs font-semibold text-gray-700">
-              Bientôt disponible
-            </p>
-            {/* <Image
-              src="/asset/SENEGAL.svg"
-              alt="Sénégal"
-              width={24}
-              height={24}
-              className="w-full h-full grayscale opacity-60"
-            /> */}
-          </div>
-        </motion.div>
-
-        {/* Togo */}
-        <motion.div
-          className="flex flex-col items-center"
-          variants={sectionVariants}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true }}
-        >
-          <div className="relative w-6 h-6">
-            <p className="absolute top-0 left-0 right-0 text-center text-xs font-semibold text-gray-700">
-              Bientôt disponible
-            </p>
-            {/* <Image
-              src="/asset/TOGO.svg"
-              alt="Togo"
-              width={24}
-              height={24}
-              className="w-full h-full grayscale opacity-60"
-            /> */}
-          </div>
-        </motion.div>
+        {countries.map((country) => (
+          <motion.div
+            key={country.name}
+            className="flex flex-col items-center justify-center"
+            variants={sectionVariants}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+          >
+            <div
+              className={`relative w-12 h-12 ${
+                country.name !== "Côte d'Ivoire" ? "grayscale" : ""
+              }`}
+            >
+              <Image
+                src={country.src}
+                alt={country.alt}
+                width={84}
+                height={84}
+                className=""
+              />
+            </div>
+            {country.name !== "Côte d'Ivoire" && (
+              <div className="capitalize  text-xs font-inriasans text-gray-500">
+                Bientôt Disponible
+              </div>
+            )}
+          </motion.div>
+        ))}
       </motion.div>
     </motion.div>
   );

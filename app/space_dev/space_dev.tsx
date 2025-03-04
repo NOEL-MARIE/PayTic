@@ -61,7 +61,7 @@ export default function Space_dev() {
                 services financiers ou les applications mobiles.
               </Typography>
 
-              <div className="space-y-4 md: ml-9 mt-5 ">
+              <div className="space-y-4   mt-5 ">
                 {/* Premier bloc */}
                 <motion.div
                   className=" flex  flex-col items-center md:flex-row md:items-center  space-x-4"

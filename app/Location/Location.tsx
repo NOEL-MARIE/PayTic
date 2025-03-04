@@ -4,7 +4,7 @@ import { Typography } from "../ui/designSystem/component/Typo/Typography";
 import Image from "next/image";
 import { motion } from "framer-motion"; // Importation de Framer Motion
 import { Button } from "../ui/designSystem/button/buttons";
-
+import UemoaPage from "../Uemoa/page";
 export default function Location() {
   const [email, setEmail] = useState("");
   const handleSubmit = (e: React.FormEvent) => {
@@ -13,7 +13,7 @@ export default function Location() {
   };
 
   return (
-    <div className="   lg:pt-20 lg:pb-20 xs:pt-6 flex pb-7 flex-col lg:flex-row items-center justify-center gap-1 bg-feature">
+    <div className="  w-full px-4  lg:pt-20 lg:pb-20 xs:pt-6 flex pb-7 flex-col lg:flex-row items-center justify-center gap-1 bg-feature">
       {/* Section Texte & Formulaire */}
       <motion.div
         className="flex flex-col items-start justify-center text-center md:text-left "
@@ -65,6 +65,7 @@ export default function Location() {
               S'inscrire à notre newsletter.
             </p>
           </div>
+          <UemoaPage />
         </div>
       </motion.div>
 

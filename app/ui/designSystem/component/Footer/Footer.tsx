@@ -28,7 +28,7 @@ export const Footer = () => {
   return (
     <Container_Footer>
       <motion.div
-        className="max-w-6xl mx-auto font-inriasans w-full px-4   flex flex-col md:items-start  md:justify-between gap-5 "
+        className="max-w-6xl mx-auto  font-inriasans w-full px-4   flex flex-col md:items-start  md:justify-between gap-5 "
         variants={containerVariants}
         initial="hidden"
         animate="visible"
@@ -82,7 +82,7 @@ export const Footer = () => {
 
           {/* Formulaire d'inscription à la newsletter */}
           <motion.div
-            className="w-full md:w-1/2 flex flex-col 2xl:items-end  md:items-start gap-4"
+            className="w-full md:w-1/2 flex flex-col 2xl:items-en  md:items-sta gap-4"
             variants={sectionVariants}
             initial="hidden"
             whileInView="visible"
@@ -98,7 +98,7 @@ export const Footer = () => {
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 placeholder="Saisissez votre e-mail"
-                className="w-full md:w-[190px] font-Inter h-[44px] px-4 border border-gray-300 rounded-md outline-none focus:ring-2 focus:ring-indigo-500"
+                className="w-full  font-Inter  text-xs text-black h-[44px] px-4 border border-gray-300 rounded-md outline-none focus:ring-2 focus:ring-indigo-500"
                 required
               />
               <motion.button

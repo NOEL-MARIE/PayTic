@@ -72,56 +72,56 @@ export default function Paiement_method() {
               height={88}
               className="w-full  max-w-4xl h-auto"
             />
-            <div className="relative">
-              <p className="absolute top-[-30px] font-inriasans left-0 right-0 text-center text-xs font-semibold text-gray-700">
-                Bientôt disponible
-              </p>
+            <div className="relative mt-8 md:mt-0">
               <Image
                 src="/asset/VISA.svg"
                 alt="Moyens de paiement"
                 width={1280}
                 height={88}
-                className="w-full max-w-4xl h-auto grayscale opacity-60"
+                className="w-full max-w-4xl h-auto grayscale opacity-20"
               />
-            </div>
-
-            <div className="relative">
-              <p className="absolute top-[-30px] font-inriasans left-0 right-0 text-center text-xs font-semibold text-gray-700">
+              <p className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-center text-xs font-semibold text-blue-500">
                 Bientôt disponible
               </p>
+            </div>
+
+            <div className="relative mt-8 md:mt-0">
               <Image
                 src="/asset/T MONNEY.svg"
                 alt="Moyens de paiement"
                 width={1280}
                 height={88}
-                className="w-full max-w-4xl h-auto grayscale opacity-60"
+                className="w-full max-w-4xl h-auto grayscale opacity-30"
               />
-            </div>
-
-            <div className="relative">
-              <p className="absolute top-[-30px] font-inriasans left-0 right-0 text-center text-xs font-semibold text-gray-700">
+              <p className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-center text-xs font-semibold text-blue-500 font-inriasans">
                 Bientôt disponible
               </p>
+            </div>
+
+            <div className="relative mt-8 md:mt-0">
               <Image
                 src="/asset/RéseauFREE.svg"
                 alt="Moyens de paiement"
                 width={1280}
                 height={88}
-                className="w-full max-w-4xl h-auto grayscale opacity-60"
+                className="w-full max-w-4xl h-auto grayscale opacity-30"
               />
-            </div>
-
-            <div className="relative">
-              <p className="absolute  top-[-30px] font-inriasans left-0 right-0 text-center text-xs font-semibold text-gray-700">
+              <p className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-center text-xs font-semibold text-blue-500 font-inriasans">
                 Bientôt disponible
               </p>
+            </div>
+
+            <div className="relative mt-8 md:mt-0">
               <Image
                 src="/asset/MASTER CARD.svg"
                 alt="Moyens de paiement"
                 width={1280}
                 height={88}
-                className="w-full max-w-4xl h-auto grayscale opacity-60"
+                className="w-full max-w-4xl h-auto grayscale opacity-30"
               />
+              <p className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-center text-xs font-semibold text-blue-500 font-inriasans">
+                Bientôt disponible
+              </p>
             </div>
           </motion.div>
 

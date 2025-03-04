@@ -1,6 +1,6 @@
 "use client";
 import React from "react";
-import { Typography } from "../../ui/designSystem/Typo/Typography";
+import { Typography } from "@/app/ui/designSystem/Typo/Typography";
 import Image from "next/image";
 import { motion } from "framer-motion"; // Importation de Framer Motion
 
@@ -31,7 +31,7 @@ export const Featured_section = () => {
             >
               <Typography
                 variant="Supporting_text_feature_section"
-                theme="gray"
+                className="text-text_navigation"
               >
                 Nous croyons en un système de paiement fluide, rapide et
                 accessible à tous. PayTic vous offre une plateforme robuste pour
@@ -77,7 +77,7 @@ export const Featured_section = () => {
                   className="mb-4 md:mb-0"
                 />
                 <div className="flex flex-col text-center md:text-start">
-                  <Typography variant="Text_Icon_Heading" theme="gray">
+                  <Typography variant="Text_Icon_Heading" >
                     Sécurité avancée et conformité
                   </Typography>
                   <Typography variant="Text_Icon_Supporting_text" theme="gray">
@@ -103,7 +103,7 @@ export const Featured_section = () => {
                   className="mb-4 md:mb-0"
                 />
                 <div className="flex flex-col text-center md:text-start">
-                  <Typography variant="Text_Icon_Heading" theme="gray">
+                  <Typography variant="Text_Icon_Heading" theme="black" >
                     Transactions instantanées
                   </Typography>
                   <Typography variant="Text_Icon_Supporting_text" theme="gray">
@@ -129,10 +129,10 @@ export const Featured_section = () => {
                   className="mb-4 md:mb-0"
                 />
                 <div className="flex flex-col text-center md:text-start">
-                  <Typography variant="Text_Icon_Heading" theme="gray">
+                  <Typography variant="Text_Icon_Heading" >
                     Interface intuitive et intégration facile
                   </Typography>
-                  <Typography variant="Text_Icon_Supporting_text" theme="gray">
+                  <Typography variant="Text_Icon_Supporting_text" theme="gray" className="text-[#454545]">
                     Une plateforme fluide avec une API puissante pour une
                     gestion simplifiée.
                   </Typography>

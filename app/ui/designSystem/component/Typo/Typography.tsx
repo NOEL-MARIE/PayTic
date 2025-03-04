@@ -35,7 +35,7 @@ export const Typography = ({
       break;
     case "Supporting_text_hero_section":
       variant_styles =
-        "font-Inter xs:text-[17px] font-normal text-[18px]  text-text_navigation leading-[26px] tracking-[0em]";
+        "font-Inter xs:text-[17px] sm:text-[17px] md:text-[18px] font-normal text-text_navigation leading-[26px] tracking-[0em]";
       break;
     case "Heading_feature_section":
       variant_styles =
@@ -44,7 +44,7 @@ export const Typography = ({
     case "Supporting_text_feature_section":
     case "Text_feature_section":
       variant_styles =
-        "font-Inter md:text-[18px]  font-normal text-[18px] leading-[26px] tracking-[0em]";
+        "font-Inter xs:text-[18px] sm:text-[18px] text-text_navigation md:text-[18px] font-normal leading-[26px] tracking-[0em]";
       break;
     case "Text_Icon_Heading":
       variant_styles =
