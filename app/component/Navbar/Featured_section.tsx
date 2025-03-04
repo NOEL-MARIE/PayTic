@@ -11,7 +11,7 @@ export const Featured_section = () => {
         <div className="flex flex-col md:flex-col md:gap-20 gap-10">
           <div className="flex gap-5 flex-col">
             <motion.div
-              className="text-left md:justify-start justify-center flex"
+              className="md:text-left text-center md:justify-start justify-center flex"
               initial={{ opacity: 0, x: -100 }} // Animation de départ
               whileInView={{ opacity: 1, x: 0 }} // Animation de glissement
               viewport={{ once: true }} // Déclencher une seule fois
@@ -23,7 +23,7 @@ export const Featured_section = () => {
             </motion.div>
 
             <motion.div
-              className="xs:flex w-[768px] h-[44px] text-wrap text-center md:text-left flex"
+              className="xs:flex  text-wrap text-center md:text-lef flex"
               initial={{ opacity: 0, x: -100 }} // Animation de départ
               whileInView={{ opacity: 1, x: 0 }} // Animation de glissement
               viewport={{ once: true }} // Déclencher une seule fois

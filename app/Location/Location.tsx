@@ -49,7 +49,7 @@ export default function Location() {
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 placeholder="Saisissez votre e-mail"
-                className=" font-Inter  px-4  border border-gray-300 rounded-md text-black outline-none focus:ring-2 focus:ring-indigo-500"
+                className="  font-Inter  px-4  border border-gray-300 rounded-md text-black outline-none focus:ring-2 focus:ring-indigo-500"
                 required
               />
               {/* Bouton d'abonnement */}
