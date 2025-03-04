@@ -38,10 +38,10 @@ export default function Location() {
             </span>
           </Typography>
           {/* Formulaire */}
-          <div className=" mt-6">
+          <div className="  mt-6">
             <form
               onSubmit={handleSubmit}
-              className="flex flex-col   sm:flex-row gap-4"
+              className="flex flex-col   md:flex-row gap-4"
             >
               {/* Champ de saisie */}
               <input
@@ -49,7 +49,7 @@ export default function Location() {
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 placeholder="Saisissez votre e-mail"
-                className="  font-Inter  px-4  border border-gray-300 rounded-md text-black outline-none focus:ring-2 focus:ring-indigo-500"
+                className="  font-Inter   p-2  border border-gray-300 rounded-md text-black outline-none focus:ring-2 focus:ring-indigo-500"
                 required
               />
               {/* Bouton d'abonnement */}

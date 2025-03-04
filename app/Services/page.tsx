@@ -100,7 +100,7 @@ export default function ServicesPage() {
         {services.map((service, index) => (
           <motion.div
             key={index}
-            className={`border p-6 rounded-lg shadow-sm ${
+            className={`border p-6 rounded-lg shadow-sm text-center ${
               service.popular ? "border-btnbg-btn_col" : "border-gray-200"
             }`}
             initial={{ opacity: 0, y: 50 }} // Animation de départ (légère montée)
@@ -115,9 +115,9 @@ export default function ServicesPage() {
             )}
             <h2 className="text-xl font-semibold mb-2">{service.title}</h2>
             <p className="text-gray-600 mb-4">{service.description}</p>
-            <ul className="space-y-2">
+            <ul className="space-y-2 items-center flex flex-col md:items-start ">
               {service.features.map((feature, i) => (
-                <li key={i} className="flex items-start">
+                <li key={i} className="  flex items-start">
                   <CheckIcon className="h-5 w-5 text-btnbg-btn_col shrink-0 mr-2" />
                   <span>{feature}</span>
                 </li>

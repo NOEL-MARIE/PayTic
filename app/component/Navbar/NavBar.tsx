@@ -78,7 +78,7 @@ export default function NavBar() {
         {/* Menu Mobile (couvrant tout l'écran avec effet de transition) */}
         <div
           className={`fixed w-full inset-0 bg-white transform ${
-            isMenuOpen ? "translate-x-0" : "-translate-x-full"
+            isMenuOpen ? "translate-x-0 menu-mobile" : "-translate-x-full"
           } transition-transform duration-300 ease-in-out md:hidden`}
         >
           {/* Contenu du menu mobile */}
@@ -99,11 +99,11 @@ export default function NavBar() {
             </div>
 
             {/* Liens du menu */}
-            <nav className="mt-6 flex flex-col  border-t border-b divide-">
-              <Typography variant="NavText">
+            <nav className="mt-6 flex flex-col border-t border-b divide-">
+              <Typography variant="NavText" className="menu-item-left">
                 <Link
                   href="/Services"
-                  className=" hover:bg-gray-100 transition-all "
+                  className="hover:bg-gray-100 transition-all"
                 >
                   <p className="border-b hover:bg-gray-100 transition-all hover:pl-2">
                     Nos services
@@ -111,23 +111,23 @@ export default function NavBar() {
                 </Link>
               </Typography>
 
-              <Typography variant="NavText" theme="gray">
+              <Typography variant="NavText" theme="gray" className="menu-item-right">
                 <Link
                   href="/nos-tarifs"
-                  className=" hover:bg-gray-100 transition-all "
+                  className="hover:bg-gray-100 transition-all"
                 >
-                  <p className=" border-b hover:bg-gray-100 transition-all hover:pl-2">
+                  <p className="border-b hover:bg-gray-100 transition-all hover:pl-2">
                     Nos tarifs
                   </p>
                 </Link>
               </Typography>
 
-              <Typography variant="NavText" theme="gray">
+              <Typography variant="NavText" theme="gray" className="menu-item-left">
                 <Link
                   href="/how-it-works"
-                  className=" hover:bg-gray-100 transition-all "
+                  className="hover:bg-gray-100 transition-all"
                 >
-                  <p className=" hover:bg-gray-100 transition-all hover:pl-2">
+                  <p className="hover:bg-gray-100 transition-all hover:pl-2">
                     Comment ça marche ?
                   </p>
                 </Link>
@@ -136,11 +136,11 @@ export default function NavBar() {
 
             {/* Boutons */}
             <div className="mt-6 flex flex-col gap-4">
-              <Button variant="besoinAide" className="md:text-[13px]">
-                <Link href="/help"> Besoin d’aide</Link>
+              <Button variant="besoinAide" className="md:text-[13px] menu-item-left">
+                <Link href="/help">Besoin d’aide</Link>
               </Button>
-              <Button variant="demanderDemo" className="md:text-[px]">
-                <Link href="/demo"> Demander une démo</Link>
+              <Button variant="demanderDemo" className="md:text-[px] menu-item-right">
+                <Link href="/demo">Demander une démo</Link>
               </Button>
             </div>
           </div>

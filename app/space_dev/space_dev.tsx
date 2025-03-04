@@ -10,13 +10,13 @@ export default function Space_dev() {
       <div className="  xs:pt-7 md:pt-0  md:mt-0 flex flex-col items-center justify-between  py-12">
         {/* Bloc de texte */}
         <motion.div
-          className="flex flex-col w-full  items-start gap-8 md:text-left xs:text-center"
+          className="flex flex-col w-full  md:items-start gap-8 md:text-left xs:text-center"
           initial={{ opacity: 0, y: 20 }} // Animation de départ (légère montée)
           whileInView={{ opacity: 1, y: 0 }} // Animation pour rendre l'élément complètement visible
           viewport={{ once: true }} // Déclencher une seule fois
           transition={{ duration: 0.5 }} // Durée de la transition
         >
-          <div className="flex flex-col  gap-4  md:px-0">
+          <div className="flex flex-col  gap-4 text-center md:text-start md:px-0">
             <Typography variant="Heading_feature_section">
               Espace Développeur
             </Typography>
