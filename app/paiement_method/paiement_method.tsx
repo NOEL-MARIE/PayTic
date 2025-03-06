@@ -38,7 +38,7 @@ export default function Paiement_method() {
 
           {/* Image */}
           <motion.div
-            className=" gap-2 grid grid-cols-2 md:grid-cols-4 xl:grid-cols-8"
+            className=" gap-2 grid grid-cols-2  md:grid-cols-2 xl:grid-cols-6"
             initial={{ opacity: 0, x: 100 }} // Animation de départ (caché à droite)
             whileInView={{ opacity: 1, x: 0 }} // Animation de glissement et apparition
             viewport={{ once: true }} // Déclencher une seule fois
@@ -78,38 +78,38 @@ export default function Paiement_method() {
                 alt="Moyens de paiement"
                 width={1280}
                 height={88}
-                className="w-full max-w-4xl h-auto grayscale opacity-20"
+                className="w-full max-w-4xl h-auto grayscale "
               />
-              <p className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-center text-xs font-semibold text-blue-500">
+              <p className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-center text-xs  font-semibold text-blue-500">
                 Bientôt disponible
               </p>
             </div>
 
-            <div className="relative mt-8 md:mt-0">
+            {/* <div className="relative mt-8 md:mt-0">
               <Image
                 src="/asset/T MONNEY.svg"
                 alt="Moyens de paiement"
                 width={1280}
                 height={88}
-                className="w-full max-w-4xl h-auto grayscale opacity-30"
+                className="w-full max-w-4xl h-auto grayscale "
               />
               <p className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-center text-xs font-semibold text-blue-500 font-inriasans">
                 Bientôt disponible
               </p>
-            </div>
+            </div> */}
 
-            <div className="relative mt-8 md:mt-0">
+            {/* <div className="relative mt-8 md:mt-0">
               <Image
                 src="/asset/RéseauFREE.svg"
                 alt="Moyens de paiement"
                 width={1280}
                 height={88}
-                className="w-full max-w-4xl h-auto grayscale opacity-30"
+                className="w-full max-w-4xl h-auto grayscale "
               />
               <p className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-center text-xs font-semibold text-blue-500 font-inriasans">
                 Bientôt disponible
               </p>
-            </div>
+            </div> */}
 
             <div className="relative mt-8 md:mt-0">
               <Image
@@ -117,7 +117,7 @@ export default function Paiement_method() {
                 alt="Moyens de paiement"
                 width={1280}
                 height={88}
-                className="w-full max-w-4xl h-auto grayscale opacity-30"
+                className="w-full max-w-4xl h-auto grayscale "
               />
               <p className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-center text-xs font-semibold text-blue-500 font-inriasans">
                 Bientôt disponible

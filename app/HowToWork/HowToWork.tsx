@@ -4,21 +4,22 @@ import { Typography } from "../ui/designSystem/Typo/Typography";
 import Image from "next/image";
 import { HTW_Container } from "./component/HTW_Container";
 import { motion } from "framer-motion";
+import { FaShieldAlt } from "react-icons/fa"; // Icône de sécurité
 
-export const HowToWork = () => {
+export default function HowToWork  ()  {
   return (
     <div className="bg-feature ">
       <div className="max-w-6xl mx-auto w-full px-4">
-        <div className=" pb-2   flex flex-col  bg-feature    ">
+        <div className="pb-2 flex flex-col bg-feature">
           <Typography
             variant="Heading_feature_section"
             theme="black"
-            className=" text-center mt-5  "
+            className="text-center mt-5"
           >
             Nos Services
           </Typography>
-          <div className=" mb-7  ">
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3  gap-8  justify-items-center">
+          <div className="mb-7">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 justify-items-center">
               <motion.div
                 initial={{ opacity: 0, y: 50 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -36,8 +37,7 @@ export const HowToWork = () => {
                   <Typography variant="HeaderIcon_Section">
                     Encaissements en ligne
                   </Typography>
-                  <Typography variant="Text_featico" className="" theme="gray">
-                    {" "}
+                  <Typography variant="Text_featico" theme="gray">
                     Acceptez Mobile Money, cartes bancaires, virements et bien
                     plus. PayTic prend en charge une large gamme de méthodes de
                     paiement pour offrir à vos clients plus de flexibilité et
@@ -63,11 +63,10 @@ export const HowToWork = () => {
                     Versements de masse
                   </Typography>
                   <Typography variant="Text_featico" theme="gray">
-                    {" "}
                     Automatisez vos paiements vers plusieurs bénéficiaires en un
                     seul clic. Idéal pour les entreprises qui gèrent des
                     paiements réguliers comme la paie, les remboursements ou les
-                    paiements fournisseurs
+                    paiements fournisseurs.
                   </Typography>
                 </HTW_Container>
               </motion.div>
@@ -89,7 +88,6 @@ export const HowToWork = () => {
                     API & Intégration
                   </Typography>
                   <Typography variant="Text_featico" theme="gray">
-                    {" "}
                     Intégrez facilement PayTic à vos plateformes e-commerce, ERP
                     et applications via une API puissante et flexible. Une
                     documentation claire et des outils dédiés aux développeurs
@@ -115,11 +113,10 @@ export const HowToWork = () => {
                     Tableau de bord avancé
                   </Typography>
                   <Typography variant="Text_featico" theme="gray">
-                    {" "}
                     Surveillez et analysez vos transactions en temps réel grâce
-                    à un tableau de bord détaillé. Obtenez des insights
-                    précieux, suivez vos flux financierset optimisez votre
-                    gestion de trésorerie en quelques clics.
+                    à un tableau de bord détaillé. Obtenez des insights précieux,
+                    suivez vos flux financiers et optimisez votre gestion de
+                    trésorerie en quelques clics.
                   </Typography>
                 </HTW_Container>
               </motion.div>
@@ -141,10 +138,31 @@ export const HowToWork = () => {
                     Support client 24/7
                   </Typography>
                   <Typography variant="Text_featico" theme="gray">
-                    {" "}
                     Bénéficiez d’un service client réactif et personnalisé,
-                    disponible 24h/24 et 7j/7 pourvous accompagner dans la
+                    disponible 24h/24 et 7j/7 pour vous accompagner dans la
                     gestion de vos paiements et répondre à toutes vos questions.
+                  </Typography>
+                </HTW_Container>
+              </motion.div>
+
+              {/* Nouveau bloc "Sécurité et Stabilité" */}
+              <motion.div
+                initial={{ opacity: 0, y: 50 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: 1 }}
+              >
+                <HTW_Container>
+                  <FaShieldAlt size={48} />
+                  <Typography variant="HeaderIcon_Section">
+                    Sécurité et Stabilité
+                  </Typography>
+                  <Typography variant="Text_featico" theme="gray">
+                    Protégez vos données et respectez les réglementations grâce
+                    à une infrastructure fiable et sécurisée. Nous mettons en
+                    place des mesures de sécurité avancées pour garantir la
+                    protection de vos informations sensibles et assurer une
+                    expérience utilisateur stable et sans interruption.
                   </Typography>
                 </HTW_Container>
               </motion.div>

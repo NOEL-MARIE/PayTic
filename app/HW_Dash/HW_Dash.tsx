@@ -7,7 +7,7 @@ import { Button } from "../ui/designSystem/Typo/button/buttons";
 import Image from "next/image"; // Importation du composant Image
 import Link from "next/link";
 
-export const HW_Dash = () => {
+export default function HW_Dash  ()  {
   // État pour suivre la section active
   const [activeSection, setActiveSection] = useState(0);
 

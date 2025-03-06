@@ -1,5 +1,6 @@
 "use client";
 import React, { useState } from "react";
+import { usePathname } from "next/navigation";
 import Image from "next/image";
 import Link from "next/link";
 import { Button } from "@/app/ui/designSystem/button/buttons";
@@ -9,14 +10,14 @@ import { FaTimes, FaBars } from "react-icons/fa";
 
 export default function NavBar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-
+  const pathname = usePathname();
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
 
   return (
-    <div>
-      <div className="max-w-6xl mx-auto font-inriasans w-full px-4">
+    <div className="">
+      <div className=" max-w-6xl mx-auto font-inriasans w-full px-4 mb-5">
         <Container_Nav>
           <div className="flex justify-between items-center w-full">
             {/* Logo */}
@@ -34,24 +35,66 @@ export default function NavBar() {
             {/* Menu navigation - Visible à partir de md */}
             <div className="hidden md:flex gap-6">
               <Typography variant="NavText">
+                <Link href="/" className="hover:text-btn_col transition-all">
+                  <p
+                    className={` ${
+                      pathname === "/"
+                        ? "text-btn_col border-b-2 border-btn_col"
+                        : ""
+                    } `}
+                  >
+                    Accueil
+                  </p>
+                </Link>
+              </Typography>
+              <Typography variant="NavText">
                 <Link
                   href="/Services"
                   className="hover:text-btn_col transition-all"
                 >
-                  Nos services
+                  <p
+                    className={` ${
+                      pathname === "/Services"
+                        ? "text-btn_col border-b-2 border-btn_col"
+                        : ""
+                    } `}
+                  >
+                    Nos services
+                  </p>
                 </Link>
               </Typography>
-              <Typography variant="NavText" theme="gray">
-                <Link href="" className="hover:text-btn_col transition-all">
-                  Nos tarifs
-                </Link>
-              </Typography>
-              <Typography variant="NavText" theme="gray">
+
+              {/* Ajout du lien Documentation API */}
+              <Typography variant="NavText">
                 <Link
-                  href="/how-it-works"
+                  href="/api-docs"
+                  className="hover:text-btn_col  transition-all"
+                >
+                  <p
+                    className={` ${
+                      pathname === "/api-docs"
+                        ? "text-btn_col border-b-2 border-btn_col"
+                        : ""
+                    } `}
+                  >
+                    Documentation API
+                  </p>
+                </Link>
+              </Typography>
+              <Typography variant="NavText">
+                <Link
+                  href="/contact"
                   className="hover:text-btn_col transition-all"
                 >
-                  Comment ça marche ?
+                  <p
+                    className={` ${
+                      pathname === "/contact"
+                        ? "text-btn_col border-b-2 border-btn_col"
+                        : ""
+                    } `}
+                  >
+                    Contact
+                  </p>
                 </Link>
               </Typography>
             </div>
@@ -59,10 +102,10 @@ export default function NavBar() {
             {/* Boutons - Affichés à partir de md */}
             <div className="hidden md:flex gap-4">
               <Button variant="besoinAide" className="md:text-[13px]">
-                <Link href="/help"> Besoin d’aide</Link>
+                <Link href="/login">Inscrivez-vous</Link>
               </Button>
               <Button variant="demanderDemo" className="md:text-[px]">
-                <Link href="/get-started"> Demander une démo</Link>
+                <Link href="/register">Connectez-vous</Link>
               </Button>
             </div>
 
@@ -101,6 +144,14 @@ export default function NavBar() {
             {/* Liens du menu */}
             <nav className="mt-6 flex flex-col border-t border-b divide-">
               <Typography variant="NavText" className="menu-item-left">
+                <Link href="/" className="hover:bg-gray-100 transition-all">
+                  <p className="border-b hover:bg-gray-100 transition-all hover:pl-2">
+                    Accueil
+                  </p>
+                </Link>
+              </Typography>
+
+              <Typography variant="NavText" className="menu-item-left">
                 <Link
                   href="/Services"
                   className="hover:bg-gray-100 transition-all"
@@ -111,18 +162,11 @@ export default function NavBar() {
                 </Link>
               </Typography>
 
-              <Typography variant="NavText" theme="gray" className="menu-item-right">
-                <Link
-                  href="/nos-tarifs"
-                  className="hover:bg-gray-100 transition-all"
-                >
-                  <p className="border-b hover:bg-gray-100 transition-all hover:pl-2">
-                    Nos tarifs
-                  </p>
-                </Link>
-              </Typography>
-
-              <Typography variant="NavText" theme="gray" className="menu-item-left">
+              <Typography
+                variant="NavText"
+                theme="gray"
+                className="menu-item-left"
+              >
                 <Link
                   href="/how-it-works"
                   className="hover:bg-gray-100 transition-all"
@@ -132,15 +176,37 @@ export default function NavBar() {
                   </p>
                 </Link>
               </Typography>
+
+              {/* Lien Documentation API pour le mobile */}
+              <Typography
+                variant="NavText"
+                theme="gray"
+                className="menu-item-left"
+              >
+                <Link
+                  href="/documentation-api"
+                  className="hover:bg-gray-100 transition-all"
+                >
+                  <p className="hover:bg-gray-100 transition-all hover:pl-2">
+                    Documentation API
+                  </p>
+                </Link>
+              </Typography>
             </nav>
 
             {/* Boutons */}
             <div className="mt-6 flex flex-col gap-4">
-              <Button variant="besoinAide" className="md:text-[13px] menu-item-left">
-                <Link href="/help">Besoin d’aide</Link>
+              <Button
+                variant="besoinAide"
+                className="md:text-[13px] menu-item-left"
+              >
+                <Link href="/login">Login</Link>
               </Button>
-              <Button variant="demanderDemo" className="md:text-[px] menu-item-right">
-                <Link href="/demo">Demander une démo</Link>
+              <Button
+                variant="demanderDemo"
+                className="md:text-[px] menu-item-right"
+              >
+                <Link href="/register">Connectez-vous</Link>
               </Button>
             </div>
           </div>

@@ -14,14 +14,26 @@ const sectionVariants = {
 
 export default function UemoaPage() {
   const countries = [
-    { name: "Côte d'Ivoire", src: "/asset/CI.svg", alt: "Côte d'Ivoire" },
-    { name: "Bénin", src: "/asset/BJ.svg", alt: "Bénin" },
-    { name: "Burkina Faso", src: "/asset/BF.svg", alt: "Burkina Faso" },
-    { name: "Guinée-Bissau", src: "/asset/GW.svg", alt: "Guinée-Bissau" },
-    { name: "Mali", src: "/asset/ML.svg", alt: "Mali" },
-    { name: "Niger", src: "/asset/Niger.svg", alt: "Niger" },
-    { name: "Sénégal", src: "/asset/SN.svg", alt: "Sénégal" },
-    { name: "Togo", src: "/asset/TG.svg", alt: "Togo" },
+    {
+      name: "Côte d'Ivoire",
+      src: "/asset/ivory coast.svg",
+      alt: "Côte d'Ivoire",
+    },
+    { name: "Bénin", src: "/asset/benin.svg", alt: "Bénin" },
+    {
+      name: "Burkina Faso",
+      src: "/asset/burkina faso.svg",
+      alt: "Burkina Faso",
+    },
+    {
+      name: "Guinée-Bissau",
+      src: "/asset/guinea bissau.svg",
+      alt: "Guinée-Bissau",
+    },
+    { name: "Mali", src: "/asset/mali.svg", alt: "Mali" },
+    { name: "Niger", src: "/asset/niger.svg", alt: "Niger" },
+    { name: "Sénégal", src: "/asset/senegal.svg", alt: "Sénégal" },
+    { name: "Togo", src: "/asset/togo.svg", alt: "Togo" },
   ];
 
   return (
@@ -48,21 +60,30 @@ export default function UemoaPage() {
             viewport={{ once: true }}
           >
             <div
-              className={`relative w-12 h-12 ${
+              className={`relative w-12 h-12  ${
                 country.name !== "Côte d'Ivoire" ? "grayscale" : ""
               }`}
             >
               <Image
                 src={country.src}
                 alt={country.alt}
-                width={84}
-                height={84}
-                className=""
+                width={54}
+                height={54}
+                className="rounded-full"
               />
             </div>
-            {country.name !== "Côte d'Ivoire" && (
-              <div className="capitalize  text-xs font-inriasans text-gray-500">
-                Bientôt Disponible
+            {country.name === "Côte d'Ivoire" ? (
+              <div className="text-sm font-inriasans font-semibold text-gray-800">
+                {country.name}
+              </div>
+            ) : (
+              <div className="flex flex-col items-center">
+                <div className="text-sm font-semibold font-inriasans text-gray-800">
+                  {country.name}
+                </div>
+                <div className="capitalize text-xs font-inriasans text-gray-500">
+                  Bientôt Disponible
+                </div>
               </div>
             )}
           </motion.div>

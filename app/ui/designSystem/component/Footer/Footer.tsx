@@ -59,15 +59,6 @@ export const Footer = () => {
                   Nos services
                 </Typography>
               </Link>
-              <Link href="/how-it-works">
-                <Typography
-                  variant="Supporting_text_hero_section"
-                  theme="white"
-                  className="cursor-pointer hover:text-Nbg-NavBar_col"
-                >
-                  Comment ça marche ?
-                </Typography>
-              </Link>
               <Link href="/api-docs">
                 <Typography
                   variant="Supporting_text_hero_section"
@@ -75,6 +66,15 @@ export const Footer = () => {
                   className="cursor-pointer hover:text-Nbg-NavBar_col"
                 >
                   Documentation API
+                </Typography>
+              </Link>
+              <Link href="/contact">
+                <Typography
+                  variant="Supporting_text_hero_section"
+                  theme="white"
+                  className="cursor-pointer hover:text-Nbg-NavBar_col"
+                >
+                  Contact
                 </Typography>
               </Link>
             </div>
@@ -103,7 +103,7 @@ export const Footer = () => {
               />
               <motion.button
                 type="submit"
-                className="w-full md:w-auto h-[44px] font-Inter flex items-center justify-center px-4 border border-gray-300 rounded-md bg-btn_col text-white hover:bg-indigo-700 transition"
+                className="w-full md:w-auto h-[44px] font-Inter flex items-center justify-center px-4  rounded-md bg-btn_col text-white hover:bg-blue-900  transition"
                 variants={sectionVariants}
                 initial={{ opacity: 0, x: 50 }}
                 whileInView={{ opacity: 1, x: 0 }}
