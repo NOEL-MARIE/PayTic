@@ -162,33 +162,24 @@ export default function NavBar() {
                 </Link>
               </Typography>
 
-              <Typography
-                variant="NavText"
-                theme="gray"
-                className="menu-item-left"
-              >
-                <Link
-                  href="/how-it-works"
-                  className="hover:bg-gray-100 transition-all"
-                >
-                  <p className="hover:bg-gray-100 transition-all hover:pl-2">
-                    Comment ça marche ?
-                  </p>
-                </Link>
-              </Typography>
-
               {/* Lien Documentation API pour le mobile */}
-              <Typography
-                variant="NavText"
-                theme="gray"
-                className="menu-item-left"
-              >
+              <Typography variant="NavText" className="menu-item-left">
                 <Link
                   href="/documentation-api"
                   className="hover:bg-gray-100 transition-all"
                 >
-                  <p className="hover:bg-gray-100 transition-all hover:pl-2">
+                  <p className="hover:bg-gray-100 border-b transition-all hover:pl-2">
                     Documentation API
+                  </p>
+                </Link>
+              </Typography>
+              <Typography variant="NavText" className="menu-item-left">
+                <Link
+                  href="/Contact"
+                  className="hover:bg-gray-100 transition-all"
+                >
+                  <p className="hover:bg-gray-100 transition-all hover:pl-2">
+                    Contact
                   </p>
                 </Link>
               </Typography>
