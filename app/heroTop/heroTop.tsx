@@ -7,6 +7,7 @@ import Image from "next/image";
 import React from "react";
 import { motion } from "framer-motion"; // Importation de Framer Motion
 import Link from "next/link";
+import UsersReviews from "../component/users_reviews/page";
 
 export default function HeroTop() {
   return (
@@ -62,6 +63,11 @@ export default function HeroTop() {
                     Nous contacter
                   </Button>
                 </Link>
+
+              </div>
+              <div>
+
+                <UsersReviews/>
               </div>
             </motion.div>
 
@@ -73,11 +79,13 @@ export default function HeroTop() {
               viewport={{ once: true }} // Déclencher une seule fois
               transition={{ duration: 0.5, delay: 0.2 }} // Durée et retard
             >
-              {/* <img
-              src="/asset/img.jpg"
-              alt="Icon_play.svg"
-              className="w-full h-full"
-              /> */}
+              <Image
+                src="/asset/Line.svg"
+                alt="Icon_play.svg"
+                width={8000}
+                height={8000}
+                className="md:w-1/2  md:pt-44 md:z-30 hidden md:block   md:overflow-visible md:absolute md:mt-52 md:right-5"
+              />
             </motion.div>
           </div>
         </div>
