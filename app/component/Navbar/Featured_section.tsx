@@ -69,10 +69,11 @@ export const Featured_section = () => {
                 viewport={{ once: true }} // Déclencher une seule fois
                 transition={{ duration: 0.5, delay: 0.6 }} // Durée et retard
               >
-                <div className="bg-white mb-4 md:mb-0 w-[50] h-[50] flex items-center shadow-md justify-center rounded-lg">
+                {/*  */}
+                <div className="bg-white mb-4 md:mb-0 w-[58] h-[58] flex items-center shadow-md justify-center rounded-lg">
                   <svg
-                    width="50"
-                    height="50"
+                    width="55"
+                    height="30"
                     viewBox="0 0 24 24"
                     fill="none"
                     xmlns="http://www.w3.org/2000/svg"
@@ -85,6 +86,91 @@ export const Featured_section = () => {
                       stroke-linejoin="round"
                     />
                   </svg>
+                </div>
+                <div className="flex flex-col text-center md:text-start">
+                  <Typography variant="Text_Icon_Heading">
+                    Sécurité avancée et conformité
+                  </Typography>
+                  <Typography variant="Text_Icon_Supporting_text" theme="gray">
+                    Protégez vos paiements avec une sécurité optimale et une
+                    conformité aux régulations locales.
+                  </Typography>
+                </div>
+              </motion.div>
+
+              {/* Bloc Transactions instantanées */}
+              <motion.div
+                className="flex flex-col md:flex-row items-center md:items-start gap-4"
+                initial={{ opacity: 0, y: 50 }} // Animation de départ
+                whileInView={{ opacity: 1, y: 0 }} // Animation de glissement
+                viewport={{ once: true }} // Déclencher une seule fois
+                transition={{ duration: 0.5, delay: 0.8 }} // Durée et retard
+              >
+                <div className="bg-white mb-4 md:mb-0 w-[58] h-[58] flex items-center shadow-md justify-center rounded-lg">
+                  <svg
+                    width="55"
+                    height="30"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M12 6V12L16 14M22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12Z"
+                      stroke="#007AFF"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </div>
+                <div className="flex flex-col text-center md:text-start">
+                  <Typography variant="Text_Icon_Heading" theme="black">
+                    Transactions instantanées
+                  </Typography>
+                  <Typography variant="Text_Icon_Supporting_text" theme="gray">
+                    Envoyez et recevez vos paiements en temps réel, sans délai
+                    ni contrainte.
+                  </Typography>
+                </div>
+              </motion.div>
+
+              {/* Bloc Interface intuitive */}
+              <motion.div
+                className="flex flex-col md:flex-row items-center md:items-start gap-4"
+                initial={{ opacity: 0, y: 50 }} // Animation de départ
+                whileInView={{ opacity: 1, y: 0 }} // Animation de glissement
+                viewport={{ once: true }} // Déclencher une seule fois
+                transition={{ duration: 0.5, delay: 1 }} // Durée et retard
+              >
+                <div className="bg-white mb-4 md:mb-0 w-[58] h-[58] flex items-center shadow-md justify-center rounded-lg">
+                  <svg
+                    width="55"
+                    height="30"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"
+                      stroke="#007AFF"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </div>
+                <div className="flex flex-col text-center md:text-start">
+                  <Typography variant="Text_Icon_Heading">
+                    Interface intuitive et intégration facile
+                  </Typography>
+                  <Typography
+                    variant="Text_Icon_Supporting_text"
+                    theme="gray"
+                    className="text-[#454545]"
+                  >
+                    Une plateforme fluide avec une API puissante pour une
+                    gestion simplifiée.
+                  </Typography>
                 </div>
               </motion.div>
             </div>
