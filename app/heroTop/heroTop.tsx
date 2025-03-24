@@ -44,7 +44,7 @@ export default function HeroTop() {
               </div>
 
               <div className="mt-4 w-full flex flex-col items-center md:flex-row md:justify-start justify-center gap-3">
-                <Link href="/demo">
+                {/* <Link href="/demo">
                   <Button
                     variant="demo"
                     className="flex flex-row gap-3 justify-center xs:justify-start items-center"
@@ -57,7 +57,7 @@ export default function HeroTop() {
                     />
                     Demo
                   </Button>
-                </Link>
+                </Link> */}
                 <Link href="/contact">
                   <Button variant="nousContacter" className="xs:mt-0">
                     Nous contacter
@@ -65,10 +65,10 @@ export default function HeroTop() {
                 </Link>
 
               </div>
-              <div>
+              {/* <div className="">
 
                 <UsersReviews/>
-              </div>
+              </div> */}
             </motion.div>
 
             {/* Section Image */}

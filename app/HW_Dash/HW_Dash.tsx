@@ -23,25 +23,25 @@ export default function HW_Dash  ()  {
       title: "Créez un compte",
       subTitle:
         "Inscrivez-vous en quelques minutes et accédez à votre tableau de bord sécurisé.",
-      image: "/asset/Content.svg", // Image spécifique pour cette section
+        image:"/asset/screen-send-busn-2.png", // Image spécifique pour cette section
     },
     {
       title: "Connectez votre entreprise",
       subTitle:
         "Ajoutez vos informations et configurez vos options de paiement.",
-      image: "/asset/HW_img.svg", // Image spécifique pour cette section
+      image: "/asset/deskScreen.png", // Image spécifique pour cette section
     },
     {
       title: "Démarrez vos transactions",
       subTitle:
         "Acceptez et envoyez des paiements en toute sécurité dès votre activation.",
-      image: "/asset/HW_img.svg", // Image spécifique pour cette section
+      image: "/asset/deskScreen2.png", // Image spécifique pour cette section
     },
     {
       title: "Intégrez notre API",
       subTitle:
         "Notre API robuste a une documentation détaillée facilitant l'intégration rapide et efficace.",
-      image: "/asset/img.jpg", // Image spécifique pour cette section
+      image: "/asset/screen-send-busn.png", // Image spécifique pour cette section
     },
   ];
 
@@ -137,8 +137,8 @@ export default function HW_Dash  ()  {
               <img
                 src={sections[activeSection].image} // Image spécifique à la section active
                 alt={`Image pour ${sections[activeSection].title}`}
-                // width={100} // Largeur de l'image réduite
-                // height={100} // Hauteur de l'image réduite
+                width={560} // Largeur de l'image réduite
+                height={570} // Hauteur de l'image réduite
                 className=" xs:pb-7  md:pb-0  flex  " // Ajustement supplémentaire pour la taille
               />
             </motion.div>

@@ -20,7 +20,7 @@ export default function Home() {
 
   return (
     <div className="  flex mt-9  ">
-      <div className="w-[317px] h-[50px]   flex items-center ">
+      <div className="w-[317px] h-[50px]   flex  ">
         {/* Left side - Overlapping images */}
         <div className="relative h-full w-[149px] flex items-center">
           {visibleImages.map((image, index) => (
@@ -53,7 +53,7 @@ export default function Home() {
         </div>
 
         {/* Right side - Rating and text */}
-        <div className="w-[152px] h-[40px] flex mt-5 flex-col justify-between">
+        <div className="w-[152px] h-[40px] flex  flex-col justify-between">
           <div className="flex items-center justify-between">
             <div className="flex ">
               {" "}

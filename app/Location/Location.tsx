@@ -38,33 +38,7 @@ export default function Location() {
             </span>
           </Typography>
           {/* Formulaire */}
-          <div className="  mt-6">
-            <form
-              onSubmit={handleSubmit}
-              className="flex flex-col   md:flex-row gap-4"
-            >
-              {/* Champ de saisie */}
-              <input
-                type="email"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                placeholder="Saisissez votre e-mail"
-                className="  font-Inter   p-2  border border-gray-300 rounded-md text-black outline-none focus:ring-2 focus:ring-indigo-500"
-                required
-              />
-              {/* Bouton d'abonnement */}
-              <Button
-                variant="sAbonner"
-                type="submit"
-                className="px-6 py-2 rounded-md font-Inter bg-btn_col text-white hover:bg-indigo-700 transition"
-              >
-                S'abonner
-              </Button>
-            </form>
-            <p className="text-sm  text-[#454545] font-Inter  mt-2">
-              S'inscrire à notre newsletter.
-            </p>
-          </div>
+
           <UemoaPage />
         </div>
       </motion.div>

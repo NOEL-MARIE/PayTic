@@ -88,7 +88,7 @@ export const Footer = () => {
             whileInView="visible"
             viewport={{ once: true }}
           >
-            <p className="   font-medium">S'inscrire à notre newsletter</p>
+            {/* <p className="   font-medium">S'inscrire à notre newsletter</p>
             <form
               onSubmit={handleSubmit}
               className="flex flex-col md:flex-row items-center md:items-end 2xl:items-end gap-3 w-full md:w-auto"
@@ -112,7 +112,7 @@ export const Footer = () => {
               >
                 S'abonner
               </motion.button>
-            </form>
+            </form> */}
           </motion.div>
         </motion.div>
 
