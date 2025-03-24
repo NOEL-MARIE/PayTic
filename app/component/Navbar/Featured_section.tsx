@@ -50,23 +50,6 @@ export const Featured_section = () => {
               viewport={{ once: true }} // Déclencher une seule fois
               transition={{ duration: 0.5, delay: 0.4 }} // Durée et retard
             >
-              {/* <div className="">
-                <svg
-                  width="24"
-                  height="20"
-                  viewBox="0 0 24 20"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M17 19V17C17 15.9391 16.5786 14.9217 15.8284 14.1716C15.0783 13.4214 14.0609 13 13 13H5C3.93913 13 2.92172 13.4214 2.17157 14.1716C1.42143 14.9217 1 15.9391 1 17V19M23 19V17C22.9993 16.1137 22.7044 15.2528 22.1614 14.5523C21.6184 13.8519 20.8581 13.3516 20 13.13M16 1.13C16.8604 1.3503 17.623 1.8507 18.1676 2.55231C18.7122 3.25392 19.0078 4.11683 19.0078 5.005C19.0078 5.89317 18.7122 6.75608 18.1676 7.45769C17.623 8.1593 16.8604 8.6597 16 8.88M13 5C13 7.20914 11.2091 9 9 9C6.79086 9 5 7.20914 5 5C5 2.79086 6.79086 1 9 1C11.2091 1 13 2.79086 13 5Z"
-                    stroke="#007AFF"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  />
-                </svg>
-              </div> */}
               <Image
                 src="/asset/deskScreen2.png"
                 width={400}
@@ -86,11 +69,10 @@ export const Featured_section = () => {
                 viewport={{ once: true }} // Déclencher une seule fois
                 transition={{ duration: 0.5, delay: 0.6 }} // Durée et retard
               >
-                {/*  */}
-                <div className="bg-white mb-4 md:mb-0 w-[48] h-[48] flex items-center shadow-md justify-center rounded-lg">
+                <div className="bg-white mb-4 md:mb-0 w-[50] h-[50] flex items-center shadow-md justify-center rounded-lg">
                   <svg
-                      width="50"
-                    height="24"
+                    width="50"
+                    height="50"
                     viewBox="0 0 24 24"
                     fill="none"
                     xmlns="http://www.w3.org/2000/svg"
@@ -103,91 +85,6 @@ export const Featured_section = () => {
                       stroke-linejoin="round"
                     />
                   </svg>
-                </div>
-                <div className="flex flex-col text-center md:text-start">
-                  <Typography variant="Text_Icon_Heading">
-                    Sécurité avancée et conformité
-                  </Typography>
-                  <Typography variant="Text_Icon_Supporting_text" theme="gray">
-                    Protégez vos paiements avec une sécurité optimale et une
-                    conformité aux régulations locales.
-                  </Typography>
-                </div>
-              </motion.div>
-
-              {/* Bloc Transactions instantanées */}
-              <motion.div
-                className="flex flex-col md:flex-row items-center md:items-start gap-4"
-                initial={{ opacity: 0, y: 50 }} // Animation de départ
-                whileInView={{ opacity: 1, y: 0 }} // Animation de glissement
-                viewport={{ once: true }} // Déclencher une seule fois
-                transition={{ duration: 0.5, delay: 0.8 }} // Durée et retard
-              >
-                <div className="bg-white mb-4 md:mb-0 w-[48] h-[48] flex items-center shadow-md justify-center rounded-lg">
-                  <svg
-                      width="50"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M12 6V12L16 14M22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12Z"
-                      stroke="#007AFF"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    />
-                  </svg>
-                </div>
-                <div className="flex flex-col text-center md:text-start">
-                  <Typography variant="Text_Icon_Heading" theme="black">
-                    Transactions instantanées
-                  </Typography>
-                  <Typography variant="Text_Icon_Supporting_text" theme="gray">
-                    Envoyez et recevez vos paiements en temps réel, sans délai
-                    ni contrainte.
-                  </Typography>
-                </div>
-              </motion.div>
-
-              {/* Bloc Interface intuitive */}
-              <motion.div
-                className="flex flex-col md:flex-row items-center md:items-start gap-4"
-                initial={{ opacity: 0, y: 50 }} // Animation de départ
-                whileInView={{ opacity: 1, y: 0 }} // Animation de glissement
-                viewport={{ once: true }} // Déclencher une seule fois
-                transition={{ duration: 0.5, delay: 1 }} // Durée et retard
-              >
-                <div className="bg-white mb-4 md:mb-0 w-[48] h-[48] flex items-center shadow-md justify-center rounded-lg">
-                  <svg
-                      width="50"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"
-                      stroke="#007AFF"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    />
-                  </svg>
-                </div>
-                <div className="flex flex-col text-center md:text-start">
-                  <Typography variant="Text_Icon_Heading">
-                    Interface intuitive et intégration facile
-                  </Typography>
-                  <Typography
-                    variant="Text_Icon_Supporting_text"
-                    theme="gray"
-                    className="text-[#454545]"
-                  >
-                    Une plateforme fluide avec une API puissante pour une
-                    gestion simplifiée.
-                  </Typography>
                 </div>
               </motion.div>
             </div>
