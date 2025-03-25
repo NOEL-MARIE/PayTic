@@ -29,13 +29,13 @@ export default function HW_Dash  ()  {
       title: "Connectez votre entreprise",
       subTitle:
         "Ajoutez vos informations et configurez vos options de paiement.",
-      image: "/asset/deskScreen.png", // Image spécifique pour cette section
+      image: "/asset/screen-mac.png", // Image spécifique pour cette section
     },
     {
       title: "Démarrez vos transactions",
       subTitle:
         "Acceptez et envoyez des paiements en toute sécurité dès votre activation.",
-      image: "/asset/deskScreen2.png", // Image spécifique pour cette section
+      image: "/asset/screen-mac2.png", // Image spécifique pour cette section
     },
     {
       title: "Intégrez notre API",
