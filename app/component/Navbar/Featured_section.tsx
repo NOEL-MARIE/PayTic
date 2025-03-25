@@ -51,7 +51,7 @@ export const Featured_section = () => {
               transition={{ duration: 0.5, delay: 0.4 }} // Durée et retard
             >
               <Image
-                src="/asset/screen-send-busn-2.png"
+                src="/asset/AAAAAA.png"
                 width={370}
                 height={360}
                 alt="PayTic image"

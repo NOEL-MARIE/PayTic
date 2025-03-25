@@ -217,9 +217,7 @@ export default function HowToWork() {
                   <Typography variant="Text_featico" theme="gray">
                     Protégez vos données et respectez les réglementations grâce
                     à une infrastructure fiable et sécurisée. Nous mettons en
-                    place des mesures de sécurité avancées pour garantir la
-                    protection de vos informations sensibles et assurer une
-                    expérience utilisateur stable et sans interruption.
+                    place des mesures de sécurité avancées. 
                   </Typography>
                 </HTW_Container>
               </motion.div>

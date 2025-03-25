@@ -73,7 +73,7 @@ export default function HeroTop() {
 
             {/* Section Image */}
             <motion.div
-              className="rounded-lg hidden md:block md:w-screen h-[640px] W-[740px] bg-cover bg-[30%] bg-[url(/asset/img.jpg)]"
+              className="rounded-lg hidden md:block md:w-screen h-[640px] W-[740px] bg-cover bg-[30%] bg-[url(/asset/payticphone2.png)]"
               initial={{ opacity: 0, x: 100 }} // Position de départ (caché à droite)
               whileInView={{ opacity: 1, x: 0 }} // Animation de glissement et apparition
               viewport={{ once: true }} // Déclencher une seule fois
